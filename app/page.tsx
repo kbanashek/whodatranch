@@ -18,7 +18,8 @@ export default function Home() {
             Explore Our Gallery
           </h2>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            View over 200 professional photos showcasing every detail of this luxury 32-acre property
+            View over 200 professional photos showcasing every detail of this
+            luxury 32-acre property
           </p>
           <a
             href="/gallery"

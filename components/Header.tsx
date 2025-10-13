@@ -98,12 +98,12 @@ export default function Header() {
             >
               Virtual Tour
             </a>
-              <a
-                href="/gallery"
-                className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
-              >
-                Gallery
-              </a>
+            <a
+              href="/gallery"
+              className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
+            >
+              Gallery
+            </a>
             <button
               onClick={() => scrollToSection("activities")}
               className="block w-full text-left text-gray-700 hover:text-primary transition-colors"

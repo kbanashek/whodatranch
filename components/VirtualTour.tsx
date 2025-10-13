@@ -73,7 +73,7 @@ export default function VirtualTour() {
                   alt={video.title}
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity"
                 />
-                
+
                 {/* Play Button Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all">
@@ -168,4 +168,3 @@ export default function VirtualTour() {
     </section>
   );
 }
-
