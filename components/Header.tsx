@@ -41,12 +41,12 @@ export default function Header() {
             >
               Virtual Tour
             </a>
-            <button
-              onClick={() => scrollToSection("gallery")}
+            <a
+              href="/gallery"
               className="text-gray-700 hover:text-primary transition-colors"
             >
               Gallery
-            </button>
+            </a>
             <button
               onClick={() => scrollToSection("activities")}
               className="text-gray-700 hover:text-primary transition-colors"
@@ -83,33 +83,33 @@ export default function Header() {
           </button>
         </div>
 
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <nav className="md:hidden mt-4 pb-4 space-y-4">
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <nav className="md:hidden mt-4 pb-4 space-y-4">
+            <a
+              href="/"
+              className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
+            >
+              Home
+            </a>
+            <a
+              href="/virtual-tour"
+              className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
+            >
+              Virtual Tour
+            </a>
               <a
-                href="/"
-                className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
-              >
-                Home
-              </a>
-              <a
-                href="/virtual-tour"
-                className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
-              >
-                Virtual Tour
-              </a>
-              <button
-                onClick={() => scrollToSection("gallery")}
+                href="/gallery"
                 className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
               >
                 Gallery
-              </button>
-              <button
-                onClick={() => scrollToSection("activities")}
-                className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
-              >
-                Activities
-              </button>
+              </a>
+            <button
+              onClick={() => scrollToSection("activities")}
+              className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
+            >
+              Activities
+            </button>
             <div className="border-t pt-4 space-y-2">
               <a
                 href="mailto:mchristian@trinitygroupfl.com"
