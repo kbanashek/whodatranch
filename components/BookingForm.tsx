@@ -56,17 +56,17 @@ export default function BookingForm() {
       
       <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4">
-              <span className="px-6 py-2 bg-accent/10 text-accent font-bold text-sm uppercase tracking-widest rounded-full">
+          <div className="text-center mb-20">
+            <div className="inline-block mb-6">
+              <span className="px-8 py-3 border-2 border-accent text-accent font-bold text-xs uppercase tracking-[0.3em]">
                 Schedule Your Visit
               </span>
             </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-6 font-display leading-tight">
+            <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-primary mb-8 font-display leading-none uppercase tracking-tight">
               Experience Luxury Living
             </h2>
-            <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
-            <p className="text-xl md:text-2xl text-gray-600 font-light">
+            <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
+            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
               Take the first step toward owning your private paradise. 
               Schedule a private, personalized tour of this extraordinary estate.
             </p>
@@ -74,7 +74,7 @@ export default function BookingForm() {
 
           <form
             onSubmit={handleSubmit}
-            className="bg-white shadow-2xl p-10 md:p-12 border-t-4 border-accent"
+            className="bg-white shadow-2xl p-12 md:p-16 border-t-4 border-accent"
           >
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>

@@ -1,7 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { FaCar, FaFish, FaPaw, FaFireAlt, FaSwimmingPool } from "react-icons/fa";
+import {
+  FaCar,
+  FaFish,
+  FaPaw,
+  FaFireAlt,
+  FaSwimmingPool,
+} from "react-icons/fa";
 import { GiAxeSwing } from "react-icons/gi";
 
 export default function Activities() {
@@ -127,19 +133,25 @@ export default function Activities() {
         <div className="mt-32 bg-black p-16 md:p-20 border-t-4 border-accent">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div>
-              <p className="text-6xl font-bold text-accent mb-4 font-display">32</p>
+              <p className="text-6xl font-bold text-accent mb-4 font-display">
+                32
+              </p>
               <p className="text-white uppercase tracking-[0.3em] text-sm font-bold">
                 Acres to Explore
               </p>
             </div>
             <div>
-              <p className="text-6xl font-bold text-accent mb-4 font-display">6+</p>
+              <p className="text-6xl font-bold text-accent mb-4 font-display">
+                6+
+              </p>
               <p className="text-white uppercase tracking-[0.3em] text-sm font-bold">
                 Unique Activities
               </p>
             </div>
             <div>
-              <p className="text-6xl font-bold text-accent mb-4 font-display">∞</p>
+              <p className="text-6xl font-bold text-accent mb-4 font-display">
+                ∞
+              </p>
               <p className="text-white uppercase tracking-[0.3em] text-sm font-bold">
                 Unforgettable Memories
               </p>
@@ -166,4 +178,3 @@ export default function Activities() {
     </section>
   );
 }
-

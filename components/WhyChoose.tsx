@@ -28,7 +28,10 @@ export default function WhyChoose() {
   ];
 
   return (
-    <section id="why-choose" className="py-24 md:py-32 bg-gradient-to-b from-white to-ranch-cream">
+    <section
+      id="why-choose"
+      className="py-24 md:py-32 bg-gradient-to-b from-white to-ranch-cream"
+    >
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <div className="text-center mb-20">
           <div className="inline-block mb-6">
@@ -41,8 +44,9 @@ export default function WhyChoose() {
           </h2>
           <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
           <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
-            More than a property—this is a rare opportunity to own a turnkey luxury estate 
-            with unparalleled lifestyle potential and investment returns.
+            More than a property—this is a rare opportunity to own a turnkey
+            luxury estate with unparalleled lifestyle potential and investment
+            returns.
           </p>
         </div>
 
@@ -53,7 +57,7 @@ export default function WhyChoose() {
               className="group bg-white border-4 border-gray-200 hover:border-accent p-12 shadow-xl hover:shadow-2xl transition-all duration-500 relative"
             >
               <div className="absolute top-0 left-0 w-full h-2 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-              
+
               <div className="relative z-10">
                 <div className="flex justify-center mb-10">
                   <div className="w-28 h-28 bg-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300">

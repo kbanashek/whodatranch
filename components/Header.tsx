@@ -69,7 +69,9 @@ export default function Header() {
               className="flex items-center space-x-2 px-6 py-3 bg-accent text-white font-bold hover:bg-white hover:text-primary transition-colors shadow-2xl border-2 border-accent"
             >
               <FaPhone />
-              <span className="text-xs tracking-widest uppercase">Call Now</span>
+              <span className="text-xs tracking-widest uppercase">
+                Call Now
+              </span>
             </a>
           </div>
 
@@ -123,7 +125,9 @@ export default function Header() {
                 className="flex items-center space-x-3 text-accent hover:text-white transition-colors font-bold"
               >
                 <FaPhone />
-                <span className="uppercase tracking-wider text-xs">Call Now</span>
+                <span className="uppercase tracking-wider text-xs">
+                  Call Now
+                </span>
               </a>
             </div>
           </nav>
