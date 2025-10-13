@@ -43,41 +43,47 @@ export default function VirtualTour() {
   ];
 
   return (
-    <section id="virtual-tour" className="py-20 mt-16 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section id="virtual-tour" className="py-32 md:py-40 mt-20 bg-white">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-serif">
-            Video Gallery
+        <div className="text-center mb-24">
+          <div className="inline-block mb-6">
+            <span className="px-8 py-3 border-2 border-accent text-accent font-bold text-xs uppercase tracking-[0.3em]">
+              Video Experience
+            </span>
+          </div>
+          <h1 className="text-6xl md:text-7xl lg:text-9xl font-bold text-primary mb-8 font-display leading-none uppercase tracking-tight">
+            Virtual Tour
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
+          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
             Take a virtual tour of Who Dat Ranch and experience the property
             from the comfort of your home
           </p>
         </div>
 
         {/* Video Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {videos.map((video, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow"
+              className="bg-white border-4 border-gray-200 hover:border-accent shadow-xl hover:shadow-2xl transition-all duration-500 group"
             >
               {/* Video Thumbnail */}
               <div
-                className="relative h-64 bg-gray-900 cursor-pointer group"
+                className="relative h-80 bg-black cursor-pointer overflow-hidden"
                 onClick={() => setSelectedVideo(index)}
               >
                 <img
                   src={video.thumbnailUrl}
                   alt={video.title}
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity"
+                  className="w-full h-full object-cover opacity-90 group-hover:opacity-70 group-hover:scale-110 transition-all duration-700"
                 />
 
                 {/* Play Button Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all">
-                    <FaPlay className="text-primary group-hover:text-white text-2xl ml-1" />
+                  <div className="w-24 h-24 bg-accent border-4 border-white flex items-center justify-center group-hover:scale-125 transition-transform duration-500 shadow-2xl">
+                    <FaPlay className="text-white text-3xl ml-2" />
                   </div>
                 </div>
 
@@ -90,12 +96,13 @@ export default function VirtualTour() {
               </div>
 
               {/* Video Info */}
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-2 font-serif">
+              <div className="p-8 bg-white">
+                <h3 className="text-3xl font-bold text-primary mb-3 font-display uppercase tracking-tight">
                   {video.title}
                 </h3>
+                <div className="w-16 h-1 bg-accent mb-4"></div>
                 {video.description && (
-                  <p className="text-gray-600">{video.description}</p>
+                  <p className="text-gray-700 text-lg">{video.description}</p>
                 )}
               </div>
             </div>

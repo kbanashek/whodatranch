@@ -82,33 +82,39 @@ export default function EnhancedGallery() {
   const currentImages = filteredImages.slice(startIndex, endIndex);
 
   return (
-    <section id="gallery" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="gallery" className="py-32 md:py-40 bg-white">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-serif">
-            Property Gallery
-          </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+        <div className="text-center mb-20">
+          <div className="inline-block mb-6">
+            <span className="px-8 py-3 border-2 border-accent text-accent font-bold text-xs uppercase tracking-[0.3em]">
+              Visual Experience
+            </span>
+          </div>
+          <h1 className="text-6xl md:text-7xl lg:text-9xl font-bold text-primary mb-8 font-display leading-none uppercase tracking-tight">
+            Gallery
+          </h1>
+          <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
+          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
             Explore every detail of Who Dat Ranch through our comprehensive
             photo collection
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-16">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => handleCategoryChange(category.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+              className={`px-8 py-4 font-bold text-sm uppercase tracking-[0.2em] transition-all duration-300 border-2 ${
                 selectedCategory === category.id
-                  ? "bg-primary text-white shadow-lg scale-105"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  ? "bg-accent text-white border-accent shadow-2xl scale-105"
+                  : "bg-white text-gray-800 border-gray-300 hover:border-accent hover:text-accent"
               }`}
             >
               {category.name}
-              <span className="ml-2 text-sm opacity-75">
+              <span className={`ml-2 text-xs ${selectedCategory === category.id ? "text-white" : "text-accent"}`}>
                 ({category.count})
               </span>
             </button>
