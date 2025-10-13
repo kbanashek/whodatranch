@@ -23,8 +23,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        serif: ["var(--font-playfair)", "Georgia", "serif"],
-        display: ["var(--font-playfair)", "Georgia", "serif"],
+        display: ["var(--font-bebas)", "Impact", "sans-serif"],
+        western: ["var(--font-bebas)", "Impact", "sans-serif"],
       },
     },
   },

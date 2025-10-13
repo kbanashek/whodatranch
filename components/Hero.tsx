@@ -15,7 +15,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
@@ -28,61 +28,71 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-screen mt-16">
-      {/* Background Image Slideshow */}
+    <section id="home" className="relative h-screen w-full overflow-hidden">
+      {/* Full Screen Background Image Slideshow */}
       <div className="absolute inset-0 bg-black">
         {heroImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            className={`absolute inset-0 transition-opacity duration-2000 ${
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div className="w-full h-full relative">
-              <Image
-                src={image}
-                alt={`Who Dat Ranch - View ${index + 1}`}
-                fill
-                className="object-cover"
-                priority={index === 0}
-              />
-            </div>
+            <Image
+              src={image}
+              alt={`Who Dat Ranch - Luxury Estate ${index + 1}`}
+              fill
+              className="object-cover scale-105 animate-slow-zoom"
+              priority={index === 0}
+              quality={100}
+            />
           </div>
         ))}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        {/* Dramatic Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center">
-        <div className="container mx-auto px-6 md:px-12 lg:px-16">
-          <div className="max-w-4xl">
-            {/* Premium Badge */}
-            <div className="inline-block mb-6">
-              <div className="px-6 py-2 bg-accent/90 backdrop-blur-sm rounded-full">
-                <p className="text-white font-semibold tracking-wider text-sm uppercase">
-                  Luxury Estate • 32 Acres • Central Florida
+      <div className="relative z-20 h-full flex items-center">
+        <div className="container mx-auto px-8 md:px-16 lg:px-24 max-w-7xl">
+          <div className="max-w-5xl">
+            {/* Luxury Badge */}
+            <div className="mb-8">
+              <div className="inline-block px-8 py-3 bg-accent border-2 border-accent shadow-2xl">
+                <p className="text-white font-bold tracking-[0.3em] text-xs md:text-sm uppercase">
+                  Exclusive Offering
                 </p>
               </div>
             </div>
-            
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 font-display leading-tight">
-              Who Dat Ranch
+
+            {/* Main Headline - MASSIVE */}
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-10 font-display leading-[0.9] tracking-tight drop-shadow-2xl">
+              WHO DAT
+              <br />
+              RANCH
             </h1>
-            
-            <div className="w-24 h-1 bg-accent mb-8"></div>
-            
-            <p className="text-xl md:text-2xl text-white/95 mb-10 leading-relaxed font-light max-w-3xl">
-              A rare opportunity to own a <span className="font-semibold text-accent">world-class equestrian estate</span> in the heart of Central Florida. 
-              Three custom cabins, pristine pastures, and endless possibilities await on this exclusive 32-acre sanctuary.
+
+            <div className="w-32 h-1 bg-accent mb-10"></div>
+
+            {/* Subheadline */}
+            <p className="text-2xl md:text-3xl lg:text-4xl text-white/95 mb-6 leading-tight font-light drop-shadow-lg">
+              32-Acre Luxury Equestrian Estate
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 items-start">
+
+            <p className="text-lg md:text-xl text-white/90 mb-12 leading-relaxed max-w-2xl drop-shadow-md">
+              Frostproof, Florida • Three Custom Cabins • Stocked Ponds •
+              Private Paradise
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 mb-16">
               <button
                 onClick={scrollToBooking}
-                className="group px-10 py-5 bg-accent text-white font-bold text-lg rounded-none hover:bg-accent/90 transition-all duration-300 shadow-2xl hover:shadow-accent/50 relative overflow-hidden"
+                className="group px-12 py-6 bg-accent text-white font-bold text-xl uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-500 shadow-2xl relative overflow-hidden border-2 border-accent"
               >
-                <span className="relative z-10">Schedule Private Tour</span>
-                <div className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                <span className="relative z-10">Schedule Showing</span>
+                <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
               </button>
               <button
                 onClick={() => {
@@ -91,39 +101,52 @@ export default function Hero() {
                     element.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
-                className="group px-10 py-5 bg-white/10 backdrop-blur-md border-2 border-white text-white font-bold text-lg rounded-none hover:bg-white hover:text-primary transition-all duration-300 shadow-2xl"
+                className="group px-12 py-6 bg-transparent border-3 border-white text-white font-bold text-xl uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-500 shadow-2xl"
               >
-                Explore Property
+                View Details
               </button>
             </div>
 
-            {/* Key Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-16 pt-12 border-t border-white/20 max-w-2xl">
-              <div>
-                <p className="text-4xl md:text-5xl font-bold text-accent mb-2">32</p>
-                <p className="text-white/80 text-sm uppercase tracking-wider">Acres</p>
+            {/* Key Features Bar */}
+            <div className="flex flex-wrap gap-6 md:gap-12 pt-8 border-t-2 border-white/30">
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-accent"></div>
+                <p className="text-white font-bold text-lg uppercase tracking-wider">
+                  32 Acres
+                </p>
               </div>
-              <div>
-                <p className="text-4xl md:text-5xl font-bold text-accent mb-2">3</p>
-                <p className="text-white/80 text-sm uppercase tracking-wider">Cabins</p>
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-accent"></div>
+                <p className="text-white font-bold text-lg uppercase tracking-wider">
+                  3 Residences
+                </p>
               </div>
-              <div>
-                <p className="text-4xl md:text-5xl font-bold text-accent mb-2">∞</p>
-                <p className="text-white/80 text-sm uppercase tracking-wider">Possibilities</p>
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-accent"></div>
+                <p className="text-white font-bold text-lg uppercase tracking-wider">
+                  Investment Ready
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="flex flex-col items-center gap-2">
-          <p className="text-white/80 text-xs uppercase tracking-widest mb-2">Discover More</p>
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-white rounded-full animate-pulse" />
+      {/* Elegant Scroll Indicator */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+        <div className="flex flex-col items-center gap-3">
+          <p className="text-white/70 text-xs uppercase tracking-[0.3em] font-bold">
+            Scroll
+          </p>
+          <div className="w-8 h-12 border-2 border-white/40 rounded-full flex items-start justify-center p-2">
+            <div className="w-1.5 h-4 bg-accent rounded-full animate-pulse" />
           </div>
         </div>
+      </div>
+
+      {/* Image Counter */}
+      <div className="absolute bottom-10 right-10 z-20 text-white/60 text-sm font-bold tracking-wider">
+        {currentImageIndex + 1} / {heroImages.length}
       </div>
     </section>
   );

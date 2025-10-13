@@ -19,37 +19,37 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
-      <div className="container mx-auto px-6 md:px-12 lg:px-16 py-5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
+      <div className="container mx-auto px-8 md:px-16 lg:px-24 py-6">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="text-2xl md:text-3xl font-bold font-display text-primary tracking-tight">
-            Who Dat Ranch
+          <div className="text-2xl md:text-3xl font-bold font-display text-white tracking-tight">
+            WHO DAT RANCH
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-10">
             <a
               href="/"
-              className="text-gray-800 hover:text-accent transition-colors font-medium tracking-wide text-sm uppercase"
+              className="text-white/90 hover:text-accent transition-colors font-bold tracking-widest text-xs uppercase"
             >
               Home
             </a>
             <a
               href="/virtual-tour"
-              className="text-gray-800 hover:text-accent transition-colors font-medium tracking-wide text-sm uppercase"
+              className="text-white/90 hover:text-accent transition-colors font-bold tracking-widest text-xs uppercase"
             >
               Virtual Tour
             </a>
             <a
               href="/gallery"
-              className="text-gray-800 hover:text-accent transition-colors font-medium tracking-wide text-sm uppercase"
+              className="text-white/90 hover:text-accent transition-colors font-bold tracking-widest text-xs uppercase"
             >
               Gallery
             </a>
             <button
               onClick={() => scrollToSection("activities")}
-              className="text-gray-800 hover:text-accent transition-colors font-medium tracking-wide text-sm uppercase"
+              className="text-white/90 hover:text-accent transition-colors font-bold tracking-widest text-xs uppercase"
             >
               Activities
             </button>
@@ -59,24 +59,24 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="mailto:mchristian@trinitygroupfl.com"
-              className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-accent transition-colors font-medium"
+              className="flex items-center space-x-2 px-5 py-3 text-white/90 hover:text-accent transition-colors font-bold border border-white/20 hover:border-accent"
             >
-              <FaEnvelope className="text-accent" />
-              <span>Email</span>
+              <FaEnvelope />
+              <span className="text-xs tracking-widest uppercase">Email</span>
             </a>
             <a
               href="tel:813-530-2061"
-              className="flex items-center space-x-2 px-6 py-3 bg-accent text-white font-bold rounded-none hover:bg-accent/90 transition-colors shadow-lg"
+              className="flex items-center space-x-2 px-6 py-3 bg-accent text-white font-bold hover:bg-white hover:text-primary transition-colors shadow-2xl border-2 border-accent"
             >
               <FaPhone />
-              <span>Call Now</span>
+              <span className="text-xs tracking-widest uppercase">Call Now</span>
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-2xl text-gray-800"
+            className="md:hidden text-2xl text-white"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -85,45 +85,45 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 space-y-4">
+          <nav className="md:hidden mt-6 pb-4 space-y-4 bg-black/60 backdrop-blur-lg p-6 rounded-lg border border-white/10">
             <a
               href="/"
-              className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
+              className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-sm"
             >
               Home
             </a>
             <a
               href="/virtual-tour"
-              className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
+              className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-sm"
             >
               Virtual Tour
             </a>
             <a
               href="/gallery"
-              className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
+              className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-sm"
             >
               Gallery
             </a>
             <button
               onClick={() => scrollToSection("activities")}
-              className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
+              className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-sm"
             >
               Activities
             </button>
-            <div className="border-t pt-4 space-y-2">
+            <div className="border-t border-white/20 pt-4 space-y-3">
               <a
                 href="mailto:mchristian@trinitygroupfl.com"
-                className="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors"
+                className="flex items-center space-x-3 text-white hover:text-accent transition-colors font-bold"
               >
                 <FaEnvelope />
-                <span>Email</span>
+                <span className="uppercase tracking-wider text-xs">Email</span>
               </a>
               <a
                 href="tel:813-530-2061"
-                className="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors"
+                className="flex items-center space-x-3 text-accent hover:text-white transition-colors font-bold"
               >
                 <FaPhone />
-                <span>Call</span>
+                <span className="uppercase tracking-wider text-xs">Call Now</span>
               </a>
             </div>
           </nav>
