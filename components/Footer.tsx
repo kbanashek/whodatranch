@@ -24,8 +24,28 @@ export default function Footer() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Footer form submitted:", formData);
-    alert("Thank you for your interest! We will contact you soon.");
+
+    // Create email body with form data
+    const subject = encodeURIComponent("Who Dat Ranch - Tour Request");
+    const body = encodeURIComponent(
+      `Tour Request Details:\n\n` +
+        `Name: ${formData.firstName} ${formData.lastName}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Email: ${formData.email}\n` +
+        `Preferred Date: ${formData.date}\n` +
+        `Preferred Time: ${formData.time}\n\n` +
+        `Please contact me to schedule a tour of Who Dat Ranch.`
+    );
+
+    // Open email client with pre-filled information
+    window.location.href = `mailto:cat@hcbyachts.com?subject=${subject}&body=${body}`;
+
+    // Show confirmation
+    alert(
+      "Thank you for your interest! Your email client will open with a pre-filled message. Please send it to complete your tour request."
+    );
+
+    // Reset form
     setFormData({
       firstName: "",
       lastName: "",
@@ -56,34 +76,47 @@ export default function Footer() {
             </h3>
             <div className="w-32 h-1 bg-accent mb-8"></div>
             <p className="text-xl mb-10 text-white/90">
-              Brought to you by King Gilbert & Matthew Christian
+              Contact Your Exclusive Agent
             </p>
 
             <div className="space-y-8 mb-12">
               <div>
                 <p className="font-bold text-accent mb-4 text-sm uppercase tracking-[0.3em]">
-                  Your Path to Luxury Living
+                  Agent
                 </p>
-                <a href="tel:813-530-2061" className="block text-white/90 hover:text-accent transition-colors text-xl mb-2 font-light">
-                  813-530-2061
-                </a>
-                <a href="tel:813-492-8233" className="block text-white/90 hover:text-accent transition-colors text-xl font-light">
-                  813-492-8233
+                <p className="text-2xl text-white/90 mb-4 font-light">
+                  Cat Pfiefer
+                </p>
+              </div>
+
+              <div>
+                <p className="font-bold text-accent mb-4 text-sm uppercase tracking-[0.3em]">
+                  Phone
+                </p>
+                <a
+                  href="tel:8636401902"
+                  className="block text-white/90 hover:text-accent transition-colors text-xl font-light"
+                >
+                  (863) 640-1902
                 </a>
               </div>
 
               <div>
-                <p className="font-bold text-accent mb-4 text-sm uppercase tracking-[0.3em]">Email</p>
-                <a href="mailto:mchristian@trinitygroupfl.com" className="block text-white/90 hover:text-accent transition-colors mb-2 text-lg">
-                  mchristian@trinitygroupfl.com
-                </a>
-                <a href="mailto:kgilbert@trinitygroupfl.com" className="block text-white/90 hover:text-accent transition-colors text-lg">
-                  kgilbert@trinitygroupfl.com
+                <p className="font-bold text-accent mb-4 text-sm uppercase tracking-[0.3em]">
+                  Email
+                </p>
+                <a
+                  href="mailto:cat@hcbyachts.com"
+                  className="block text-white/90 hover:text-accent transition-colors text-lg"
+                >
+                  cat@hcbyachts.com
                 </a>
               </div>
 
               <div>
-                <p className="font-bold text-accent mb-4 text-sm uppercase tracking-[0.3em]">Location</p>
+                <p className="font-bold text-accent mb-4 text-sm uppercase tracking-[0.3em]">
+                  Location
+                </p>
                 <p className="text-white/90 text-lg">5330 Hwy 630 E</p>
                 <p className="text-white/90 text-lg">Frostproof, FL 33843</p>
               </div>
@@ -210,7 +243,9 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t-2 border-white/10 pt-10 text-center">
-          <p className="text-white/60 text-sm uppercase tracking-widest">© 2025 Who Dat Ranch. All rights reserved.</p>
+          <p className="text-white/60 text-sm uppercase tracking-widest">
+            © 2025 Who Dat Ranch. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

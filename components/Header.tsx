@@ -58,14 +58,14 @@ export default function Header() {
           {/* Contact Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="mailto:mchristian@trinitygroupfl.com"
+              href="mailto:cat@hcbyachts.com"
               className="flex items-center space-x-2 px-5 py-3 text-white/90 hover:text-accent transition-colors font-bold border border-white/20 hover:border-accent"
             >
               <FaEnvelope />
               <span className="text-xs tracking-widest uppercase">Email</span>
             </a>
             <a
-              href="tel:813-530-2061"
+              href="tel:8636401902"
               className="flex items-center space-x-2 px-6 py-3 bg-accent text-white font-bold hover:bg-white hover:text-primary transition-colors shadow-2xl border-2 border-accent"
             >
               <FaPhone />
@@ -114,14 +114,14 @@ export default function Header() {
             </a>
             <div className="border-t border-white/20 pt-4 space-y-3">
               <a
-                href="mailto:mchristian@trinitygroupfl.com"
+                href="mailto:cat@hcbyachts.com"
                 className="flex items-center space-x-3 text-white hover:text-accent transition-colors font-bold"
               >
                 <FaEnvelope />
                 <span className="uppercase tracking-wider text-xs">Email</span>
               </a>
               <a
-                href="tel:813-530-2061"
+                href="tel:8636401902"
                 className="flex items-center space-x-3 text-accent hover:text-white transition-colors font-bold"
               >
                 <FaPhone />

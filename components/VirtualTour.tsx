@@ -115,26 +115,6 @@ export default function VirtualTour() {
           ))}
         </div>
 
-        {/* Instructions */}
-        <div className="mt-16 text-center max-w-2xl mx-auto">
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-3">
-              Need the Video URLs?
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              To complete the virtual tour, you&apos;ll need to add your video
-              URLs (YouTube, Vimeo, or direct video links). Update the{" "}
-              <code className="bg-white px-2 py-1 rounded text-sm">
-                videoUrl
-              </code>{" "}
-              field in{" "}
-              <code className="bg-white px-2 py-1 rounded text-sm">
-                components/VirtualTour.tsx
-              </code>
-            </p>
-          </div>
-        </div>
-
         {/* CTA */}
         <div className="text-center mt-12">
           <button

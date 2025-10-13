@@ -3,11 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const heroImages = [
-  "/images/hero1.jpg",
-  "/images/hero2.jpg",
-  "/images/hero3.jpg",
-];
+const heroImages = ["/images/hero2.jpg", "/images/hero3.jpg"];
 
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -54,9 +50,9 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 h-full flex items-center">
+      <div className="relative z-20 h-full flex items-center pt-32 md:pt-40">
         <div className="container mx-auto px-8 md:px-16 lg:px-24 max-w-7xl">
-          <div className="max-w-5xl">
+          <div className="max-w-6xl">
             {/* Luxury Badge */}
             <div className="mb-8">
               <div className="inline-block px-8 py-3 bg-accent border-2 border-accent shadow-2xl">
@@ -66,11 +62,9 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Main Headline - MASSIVE */}
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-10 font-display leading-[0.9] tracking-tight drop-shadow-2xl">
-              WHO DAT
-              <br />
-              RANCH
+            {/* Main Headline - MASSIVE - One Line */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-10 font-display leading-none tracking-tight drop-shadow-2xl whitespace-nowrap">
+              WHO DAT RANCH
             </h1>
 
             <div className="w-32 h-1 bg-accent mb-10"></div>

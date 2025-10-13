@@ -23,11 +23,28 @@ export default function BookingForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission - you can integrate with your backend or email service
-    console.log("Form submitted:", formData);
-    alert(
-      "Thank you for your interest! We will contact you soon to confirm your tour."
+
+    // Create email body with form data
+    const subject = encodeURIComponent("Who Dat Ranch - Tour Request");
+    const body = encodeURIComponent(
+      `Tour Request Details:\n\n` +
+        `Name: ${formData.firstName} ${formData.lastName}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Email: ${formData.email}\n` +
+        `Preferred Date: ${formData.date}\n` +
+        `Preferred Time: ${formData.time}\n\n` +
+        `Please contact me to schedule a tour of Who Dat Ranch.`
     );
+
+    // Open email client with pre-filled information
+    window.location.href = `mailto:cat@hcbyachts.com?subject=${subject}&body=${body}`;
+
+    // Show confirmation
+    alert(
+      "Thank you for your interest! Your email client will open with a pre-filled message. Please send it to complete your tour request."
+    );
+
+    // Reset form
     setFormData({
       firstName: "",
       lastName: "",
@@ -47,13 +64,16 @@ export default function BookingForm() {
   };
 
   return (
-    <section id="booking" className="py-24 md:py-32 bg-gradient-to-br from-ranch-cream to-white relative overflow-hidden">
+    <section
+      id="booking"
+      className="py-24 md:py-32 bg-gradient-to-br from-ranch-cream to-white relative overflow-hidden"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full -mr-48 -mt-48"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary rounded-full -ml-40 -mb-40"></div>
       </div>
-      
+
       <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">
@@ -67,8 +87,8 @@ export default function BookingForm() {
             </h2>
             <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
-              Take the first step toward owning your private paradise. 
-              Schedule a private, personalized tour of this extraordinary estate.
+              Take the first step toward owning your private paradise. Schedule
+              a private, personalized tour of this extraordinary estate.
             </p>
           </div>
 
@@ -194,7 +214,9 @@ export default function BookingForm() {
               type="submit"
               className="group w-full px-12 py-6 bg-accent text-white font-bold text-lg rounded-none hover:bg-accent/90 transition-all duration-300 shadow-2xl hover:shadow-accent/50 relative overflow-hidden"
             >
-              <span className="relative z-10 uppercase tracking-widest">Reserve Your Private Tour</span>
+              <span className="relative z-10 uppercase tracking-widest">
+                Reserve Your Private Tour
+              </span>
               <div className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
             </button>
           </form>
