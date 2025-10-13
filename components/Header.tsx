@@ -47,12 +47,12 @@ export default function Header() {
             >
               Gallery
             </a>
-            <button
-              onClick={() => scrollToSection("activities")}
+            <a
+              href="/activities"
               className="text-white/90 hover:text-accent transition-colors font-bold tracking-widest text-xs uppercase"
             >
               Activities
-            </button>
+            </a>
           </nav>
 
           {/* Contact Buttons */}
@@ -104,12 +104,12 @@ export default function Header() {
             >
               Gallery
             </a>
-            <button
-              onClick={() => scrollToSection("activities")}
+            <a
+              href="/activities"
               className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-sm"
             >
               Activities
-            </button>
+            </a>
             <div className="border-t border-white/20 pt-4 space-y-3">
               <a
                 href="mailto:mchristian@trinitygroupfl.com"
