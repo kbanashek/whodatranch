@@ -114,7 +114,13 @@ export default function EnhancedGallery() {
               }`}
             >
               {category.name}
-              <span className={`ml-2 text-xs ${selectedCategory === category.id ? "text-white" : "text-accent"}`}>
+              <span
+                className={`ml-2 text-xs ${
+                  selectedCategory === category.id
+                    ? "text-white"
+                    : "text-accent"
+                }`}
+              >
                 ({category.count})
               </span>
             </button>
@@ -137,27 +143,27 @@ export default function EnhancedGallery() {
           {currentImages.map((image, index) => {
             const actualIndex = startIndex + index;
             return (
-            <div
-              key={actualIndex}
-              className="relative h-64 rounded-lg overflow-hidden shadow-md cursor-pointer group"
-              onClick={() => setSelectedImage(actualIndex)}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                loading="lazy"
-                className="object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                <span className="text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">
-                  +
-                </span>
+              <div
+                key={actualIndex}
+                className="relative h-64 rounded-lg overflow-hidden shadow-md cursor-pointer group"
+                onClick={() => setSelectedImage(actualIndex)}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  loading="lazy"
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                  <span className="text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    +
+                  </span>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
         </div>
 
         {/* Pagination */}
