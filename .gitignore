@@ -6,6 +6,12 @@
 .pnp.js
 package-lock.json
 
+# videos
+/public/videos/*.mov
+/public/videos/*.mp4
+/public/videos/*.avi
+/public/videos/*.mkv
+
 # testing
 /coverage
 
