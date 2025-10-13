@@ -17,16 +17,16 @@ export default function VirtualTour() {
   // For now, using placeholder YouTube embed format
   const videos: VideoItem[] = [
     {
+      title: "Interior & Drone View",
+      videoUrl: "https://www.youtube.com/embed/yOSgz_nmqP8",
+      thumbnailUrl: "/images/hero1.jpg",
+      description: "Aerial and interior views of the property",
+    },
+    {
       title: "Life at Who Dat Ranch",
       videoUrl: "",
       thumbnailUrl: "/images/gallery1.jpg",
       description: "Experience daily life at the ranch",
-    },
-    {
-      title: "Interior & Drone View",
-      videoUrl: "",
-      thumbnailUrl: "/images/gallery2.jpg",
-      description: "Aerial and interior views of the property",
     },
     {
       title: "Airstrip & Westgate Ranch",

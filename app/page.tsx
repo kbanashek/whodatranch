@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PropertyOverview from "@/components/PropertyOverview";
+import FeaturedVideo from "@/components/FeaturedVideo";
 import BookingForm from "@/components/BookingForm";
 import Amenities from "@/components/Amenities";
 import WhyChoose from "@/components/WhyChoose";
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <Hero />
       <PropertyOverview />
+      <FeaturedVideo />
       <section id="gallery" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-serif">
