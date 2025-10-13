@@ -43,8 +43,8 @@ export default function Amenities() {
           <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
           <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
             Experience a lifestyle where every day brings new adventures. This
-            isn&apos;t just a property— it&apos;s your private resort with endless
-            entertainment for family and guests.
+            isn&apos;t just a property— it&apos;s your private resort with
+            endless entertainment for family and guests.
           </p>
         </div>
 

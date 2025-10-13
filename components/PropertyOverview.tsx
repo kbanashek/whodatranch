@@ -78,9 +78,9 @@ export default function PropertyOverview() {
                 </span>
                 , Who Dat Ranch represents a rare convergence of luxury,
                 privacy, and endless recreational opportunity. This is more than
-                an estate—it&apos;s a lifestyle destination where families create
-                lasting memories or savvy investors discover Florida&apos;s most
-                unique short-term rental opportunity.
+                an estate—it&apos;s a lifestyle destination where families
+                create lasting memories or savvy investors discover
+                Florida&apos;s most unique short-term rental opportunity.
               </p>
             </div>
 
