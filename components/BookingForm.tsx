@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import SuccessModal from "./SuccessModal";
 
 interface FormData {
   firstName: string;
@@ -20,6 +21,7 @@ export default function BookingForm() {
     date: "",
     time: "",
   });
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,13 +38,13 @@ export default function BookingForm() {
         `Please contact me to schedule a tour of Who Dat Ranch.`
     );
 
-    // Open email client with pre-filled information
-    window.location.href = `mailto:cat@hcbyachts.com?subject=${subject}&body=${body}`;
-
-    // Show confirmation
-    alert(
-      "Thank you for your interest! Your email client will open with a pre-filled message. Please send it to complete your tour request."
-    );
+    // Show success modal
+    setShowSuccessModal(true);
+    
+    // Open email client with pre-filled information after a short delay
+    setTimeout(() => {
+      window.location.href = `mailto:cat@hcbyachts.com?subject=${subject}&body=${body}`;
+    }, 500);
 
     // Reset form
     setFormData({
@@ -64,8 +66,16 @@ export default function BookingForm() {
   };
 
   return (
-    <section
-      id="booking"
+    <>
+      <SuccessModal
+        isOpen={showSuccessModal}
+        onClose={() => setShowSuccessModal(false)}
+        title="Request Submitted!"
+        message="Your email client will open with a pre-filled tour request. Please send it to complete your booking, and we'll contact you shortly to confirm."
+      />
+      
+      <section
+        id="booking"
       className="py-24 md:py-32 bg-gradient-to-br from-ranch-cream to-white relative overflow-hidden"
     >
       {/* Background Pattern */}
@@ -223,5 +233,6 @@ export default function BookingForm() {
         </div>
       </div>
     </section>
+    </>
   );
 }

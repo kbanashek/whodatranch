@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FaFacebook, FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
+import SuccessModal from "./SuccessModal";
 
 interface FooterFormData {
   firstName: string;
@@ -21,6 +22,7 @@ export default function Footer() {
     date: "",
     time: "",
   });
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,13 +39,13 @@ export default function Footer() {
         `Please contact me to schedule a tour of Who Dat Ranch.`
     );
 
-    // Open email client with pre-filled information
-    window.location.href = `mailto:cat@hcbyachts.com?subject=${subject}&body=${body}`;
-
-    // Show confirmation
-    alert(
-      "Thank you for your interest! Your email client will open with a pre-filled message. Please send it to complete your tour request."
-    );
+    // Show success modal
+    setShowSuccessModal(true);
+    
+    // Open email client with pre-filled information after a short delay
+    setTimeout(() => {
+      window.location.href = `mailto:cat@hcbyachts.com?subject=${subject}&body=${body}`;
+    }, 500);
 
     // Reset form
     setFormData({
@@ -65,7 +67,15 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white py-24 border-t-4 border-accent">
+    <>
+      <SuccessModal
+        isOpen={showSuccessModal}
+        onClose={() => setShowSuccessModal(false)}
+        title="Request Submitted!"
+        message="Your email client will open with a pre-filled tour request. Please send it to complete your booking, and we'll contact you shortly to confirm."
+      />
+      
+      <footer className="bg-black text-white py-24 border-t-4 border-accent">
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2 gap-20 mb-20">
@@ -249,5 +259,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }

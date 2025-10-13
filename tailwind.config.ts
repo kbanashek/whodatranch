@@ -9,16 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Refined Central Florida Ranch Palette - Luxury & Warmth
-        primary: "#2C5F2D", // Deep forest green - Florida pastures (kept for good contrast)
-        secondary: "#8B7355", // Warm taupe - ranch wood, earth tones
-        accent: "#D4AF37", // Rich gold - Florida sunshine, luxury
+        // Earthy Luxury Ranch Palette - Browns, Greens, Whites, Black
+        primary: "#3A4D2C", // Deep olive green - pastures & nature
+        secondary: "#6B4423", // Rich walnut brown - earth & wood
+        accent: "#B8860B", // Dark goldenrod - understated luxury
         ranch: {
-          brown: "#8B4513", // Saddle brown - rustic accents
-          tan: "#D2B48C", // Tan - warm sand
-          sage: "#87AE73", // Sage green - natural landscape
-          terracotta: "#CD6839", // Terracotta - Florida clay, warmth
-          cream: "#FAF3E0", // Warm cream - light backgrounds
+          brown: "#5C4033", // Coffee brown - deep earth tones
+          darkBrown: "#3E2723", // Espresso - sophistication
+          tan: "#C19A6B", // Camel tan - warm sand
+          sage: "#9CAF88", // Soft sage - Florida landscape
+          forestGreen: "#2E5339", // Forest green - trees & pastures
+          moss: "#6B7F5B", // Moss green - natural feel
+          cream: "#FFF8DC", // Cornsilk cream - light backgrounds
+          ivory: "#FFFFF0", // Ivory white - premium feel
+          charcoal: "#1A1A1A", // Near-black - luxury details
         },
       },
       fontFamily: {
