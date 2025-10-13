@@ -15,7 +15,8 @@ export default function FeaturedVideo() {
           </h2>
           <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-            Take a virtual tour with stunning aerial drone footage and interior views
+            Take a virtual tour with stunning aerial drone footage and interior
+            views
           </p>
         </div>
 
@@ -46,4 +47,3 @@ export default function FeaturedVideo() {
     </section>
   );
 }
-

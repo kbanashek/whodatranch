@@ -24,21 +24,27 @@ export default function VirtualTour() {
     },
     {
       title: "Life at Who Dat Ranch",
-      videoUrl: "",
+      videoUrl: "https://www.youtube.com/embed/fcFAYZp4bdU",
       thumbnailUrl: "/images/gallery1.jpg",
       description: "Experience daily life at the ranch",
     },
     {
-      title: "Airstrip & Westgate Ranch",
-      videoUrl: "",
-      thumbnailUrl: "/images/gallery3.jpg",
-      description: "Explore the airstrip and surrounding areas",
+      title: "Drone & 3 Cabins",
+      videoUrl: "https://www.youtube.com/embed/hsDhF9849dQ",
+      thumbnailUrl: "/images/hero2.jpg",
+      description: "Stunning aerial views of all three cabins",
     },
     {
-      title: "Main Home Interior",
-      videoUrl: "",
-      thumbnailUrl: "/images/gallery4.jpg",
+      title: "Main House Interior",
+      videoUrl: "https://www.youtube.com/embed/xqh2n70eKAQ",
+      thumbnailUrl: "/images/main-home.jpg",
       description: "Tour the beautiful main home",
+    },
+    {
+      title: "Westgate River Ranch",
+      videoUrl: "https://www.youtube.com/embed/dCpjnDXz87w",
+      thumbnailUrl: "/images/gallery3.jpg",
+      description: "Explore the nearby Westgate River Ranch",
     },
   ];
 
