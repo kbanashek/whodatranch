@@ -24,35 +24,35 @@ export default function Activities() {
       title: "Fishing Ponds",
       description:
         "Grab a rod and enjoy ponds filled with bass, perch and more while you unwind by the water. Whether lake-side or dock fishing is your preference enjoy a calming experience catching your potential lunch.",
-      image: "/images/fishing-pond.jpg",
+      image: "/images/gallery3.jpg",
     },
     {
       icon: FaPaw,
       title: "Animal Exploration",
       description:
         "An array of friendly wildlife call Who Dat Ranch home and it is all up for exploration. Between cows, hogs, goats, sheep, swans, ducks, tortoises and space for so much more you've got your own personal petting zoo right on property.",
-      image: "/images/barn.jpg",
+      image: "/images/animal_exploration.jpg",
     },
     {
       icon: GiAxeSwing,
       title: "Axe Throwing",
       description:
         "Grab a hatchet and enjoy some healthy competition amongst friends and family.",
-      image: "/images/gallery2.jpg",
+      image: "/images/ax_throwing.jpg",
     },
     {
       icon: FaFireAlt,
       title: "Fire Pit",
       description:
         "Gather everyone around a designated fire pit area to roast s'mores, share stories, down some cold ones and truly immerse yourselves under the stars amongst loved ones.",
-      image: "/images/gallery3.jpg",
+      image: "/images/firepit.jpg",
     },
     {
       icon: FaSwimmingPool,
       title: "Heated Pool",
       description:
         "Whether it's a hot summer day or a cool fall afternoon you can enjoy this fully screened in heated pool. The deck has ample seating, a propane grill, a TV, surround sound speakers, a pool table, two dart boards and an outdoor bathroom to host the perfect pool party.",
-      image: "/images/main-home.jpg",
+      image: "/images/Main House Cabin/Main House Pool.jpg",
     },
   ];
 

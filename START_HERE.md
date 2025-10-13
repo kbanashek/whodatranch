@@ -109,7 +109,7 @@ You need to add **17 images** to `public/images/` folder:
 ```
 Hero (3):         hero1.jpg, hero2.jpg, hero3.jpg
 Main Home (1):    main-home.jpg
-Amenities (3):    fishing-pond.jpg, garage.jpg, barn.jpg
+Amenities (3):    fishing-pond.jpg, garage.jpg, ax_throwing.jpg
 Gallery (9):      gallery1.jpg through gallery9.jpg
 ```
 

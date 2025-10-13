@@ -24,7 +24,7 @@ export default function Amenities() {
       title: "Multiple Barns",
       description:
         "Take a stroll through the animal area and feed or play with a host of wildlife who call Who Dat Ranch home.",
-      image: "/images/barn.jpg",
+      image: "/images/ax_throwing.jpg",
     },
   ];
 

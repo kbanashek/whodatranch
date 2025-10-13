@@ -68,7 +68,7 @@ Then add these images:
 
 - `fishing-pond.jpg` - Fishing pond view
 - `garage.jpg` - Machine garage
-- `barn.jpg` - Barn/animal area
+- `ax_throwing.jpg` - Barn/animal area
 
 **Gallery (9+ images):**
 
