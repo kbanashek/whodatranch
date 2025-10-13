@@ -45,48 +45,57 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-16">
-      <div className="container mx-auto px-4">
+    <footer className="bg-gradient-to-b from-primary to-earth text-white py-20">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-2 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 gap-16 mb-16">
           {/* Contact Information */}
           <div>
-            <h3 className="text-3xl font-bold mb-6 font-serif">
+            <h3 className="text-4xl md:text-5xl font-bold mb-4 font-display">
               Who Dat Ranch
             </h3>
-            <p className="text-lg mb-6">
+            <div className="w-24 h-1 bg-accent mb-6"></div>
+            <p className="text-xl mb-8 text-white/90 font-light">
               Brought to you by King Gilbert & Matthew Christian
             </p>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-6 mb-10">
               <div>
-                <p className="font-semibold text-accent mb-2">
-                  Your Path to Luxury Living
+                <p className="font-bold text-accent mb-3 text-lg tracking-wide">
+                  YOUR PATH TO LUXURY LIVING
                 </p>
-                <p className="text-gray-300">Call 813-530-2061</p>
-                <p className="text-gray-300">813-492-8233</p>
+                <a href="tel:813-530-2061" className="block text-white/90 hover:text-accent transition-colors text-lg mb-1">
+                  813-530-2061
+                </a>
+                <a href="tel:813-492-8233" className="block text-white/90 hover:text-accent transition-colors text-lg">
+                  813-492-8233
+                </a>
               </div>
 
               <div>
-                <p className="font-semibold text-accent mb-2">Email:</p>
-                <p className="text-gray-300">mchristian@trinitygroupfl.com</p>
-                <p className="text-gray-300">kgilbert@trinitygroupfl.com</p>
+                <p className="font-bold text-accent mb-3 text-lg tracking-wide">EMAIL</p>
+                <a href="mailto:mchristian@trinitygroupfl.com" className="block text-white/90 hover:text-accent transition-colors mb-1">
+                  mchristian@trinitygroupfl.com
+                </a>
+                <a href="mailto:kgilbert@trinitygroupfl.com" className="block text-white/90 hover:text-accent transition-colors">
+                  kgilbert@trinitygroupfl.com
+                </a>
               </div>
 
               <div>
-                <p className="font-semibold text-accent mb-2">Address:</p>
-                <p className="text-gray-300">5330 Hwy 630 E</p>
-                <p className="text-gray-300">Frostproof, FL, USA</p>
+                <p className="font-bold text-accent mb-3 text-lg tracking-wide">LOCATION</p>
+                <p className="text-white/90 text-lg">5330 Hwy 630 E</p>
+                <p className="text-white/90 text-lg">Frostproof, FL 33843</p>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="flex space-x-6">
+            <div className="flex space-x-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-accent transition-colors"
+                className="p-3 bg-white/10 hover:bg-accent transition-colors text-2xl"
                 aria-label="Facebook"
               >
                 <FaFacebook />
@@ -95,7 +104,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-accent transition-colors"
+                className="p-3 bg-white/10 hover:bg-accent transition-colors text-2xl"
                 aria-label="Instagram"
               >
                 <FaInstagram />
@@ -104,7 +113,7 @@ export default function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-accent transition-colors"
+                className="p-3 bg-white/10 hover:bg-accent transition-colors text-2xl"
                 aria-label="Twitter"
               >
                 <FaTwitter />
@@ -113,7 +122,7 @@ export default function Footer() {
                 href="https://tiktok.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:text-accent transition-colors"
+                className="p-3 bg-white/10 hover:bg-accent transition-colors text-2xl"
                 aria-label="TikTok"
               >
                 <FaTiktok />
@@ -123,9 +132,10 @@ export default function Footer() {
 
           {/* Quick Contact Form */}
           <div>
-            <h4 className="text-2xl font-bold mb-6 font-serif">
-              Quick Contact
+            <h4 className="text-3xl font-bold mb-6 font-display">
+              Schedule a Visit
             </h4>
+            <div className="w-16 h-1 bg-accent mb-8"></div>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <input
@@ -135,7 +145,7 @@ export default function Footer() {
                   value={formData.firstName}
                   onChange={handleChange}
                   required
-                  className="px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-accent"
+                  className="px-5 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-none focus:outline-none focus:border-accent text-white placeholder-white/60"
                 />
                 <input
                   type="text"
@@ -144,7 +154,7 @@ export default function Footer() {
                   value={formData.lastName}
                   onChange={handleChange}
                   required
-                  className="px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-accent"
+                  className="px-5 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-none focus:outline-none focus:border-accent text-white placeholder-white/60"
                 />
               </div>
 
@@ -155,7 +165,7 @@ export default function Footer() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-accent"
+                className="w-full px-5 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-none focus:outline-none focus:border-accent text-white placeholder-white/60"
               />
 
               <input
@@ -165,7 +175,7 @@ export default function Footer() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-accent"
+                className="w-full px-5 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-none focus:outline-none focus:border-accent text-white placeholder-white/60"
               />
 
               <div className="grid grid-cols-2 gap-4">
@@ -175,7 +185,7 @@ export default function Footer() {
                   value={formData.date}
                   onChange={handleChange}
                   required
-                  className="px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-accent"
+                  className="px-5 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-none focus:outline-none focus:border-accent text-white"
                 />
                 <input
                   type="time"
@@ -183,23 +193,24 @@ export default function Footer() {
                   value={formData.time}
                   onChange={handleChange}
                   required
-                  className="px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-accent"
+                  className="px-5 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-none focus:outline-none focus:border-accent text-white"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-accent text-white font-semibold rounded hover:bg-accent/90 transition-colors"
+                className="group w-full px-8 py-5 bg-accent text-white font-bold text-lg rounded-none hover:bg-accent/90 transition-all duration-300 shadow-2xl relative overflow-hidden"
               >
-                Submit
+                <span className="relative z-10">Request Tour</span>
+                <div className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
               </button>
             </form>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>© 2035 by Who Dat Ranch. Powered and secured by Wix</p>
+        <div className="border-t border-white/20 pt-8 text-center">
+          <p className="text-white/70 text-sm">© 2025 Who Dat Ranch. All rights reserved.</p>
         </div>
       </div>
     </footer>

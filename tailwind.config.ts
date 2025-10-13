@@ -9,24 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Central Florida Ranch Color Palette
-        primary: "#8B4513", // Saddle Brown - rustic, earthy
-        secondary: "#D2691E", // Chocolate - warm, inviting
-        accent: "#CD853F", // Peru - sunset, golden hour
-        sage: "#9CAF88", // Sage green - pastures, nature
-        sand: "#F5DEB3", // Wheat - Florida sand, warmth
-        sky: "#87CEEB", // Sky blue - Florida skies
-        earth: "#6B4423", // Dark earth - rich soil
-        cream: "#FFF8DC", // Cornsilk - light, airy
+        // Refined Central Florida Ranch Palette - Luxury & Warmth
+        primary: "#2C5F2D", // Deep forest green - Florida pastures (kept for good contrast)
+        secondary: "#8B7355", // Warm taupe - ranch wood, earth tones
+        accent: "#D4AF37", // Rich gold - Florida sunshine, luxury
+        ranch: {
+          brown: "#8B4513", // Saddle brown - rustic accents
+          tan: "#D2B48C", // Tan - warm sand
+          sage: "#87AE73", // Sage green - natural landscape
+          terracotta: "#CD6839", // Terracotta - Florida clay, warmth
+          cream: "#FAF3E0", // Warm cream - light backgrounds
+        },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         serif: ["var(--font-playfair)", "Georgia", "serif"],
         display: ["var(--font-playfair)", "Georgia", "serif"],
-      },
-      backgroundImage: {
-        'wood-texture': "url('/images/wood-texture.jpg')",
-        'ranch-pattern': "linear-gradient(135deg, #8B4513 0%, #D2691E 100%)",
       },
     },
   },

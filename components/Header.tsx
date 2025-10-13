@@ -19,64 +19,64 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-      <div className="container mx-auto px-4 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 py-5">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="text-2xl md:text-3xl font-bold font-serif text-primary">
+          <div className="text-2xl md:text-3xl font-bold font-display text-primary tracking-tight">
             Who Dat Ranch
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-10">
             <a
               href="/"
-              className="text-gray-700 hover:text-primary transition-colors"
+              className="text-gray-800 hover:text-accent transition-colors font-medium tracking-wide text-sm uppercase"
             >
               Home
             </a>
             <a
               href="/virtual-tour"
-              className="text-gray-700 hover:text-primary transition-colors"
+              className="text-gray-800 hover:text-accent transition-colors font-medium tracking-wide text-sm uppercase"
             >
               Virtual Tour
             </a>
             <a
               href="/gallery"
-              className="text-gray-700 hover:text-primary transition-colors"
+              className="text-gray-800 hover:text-accent transition-colors font-medium tracking-wide text-sm uppercase"
             >
               Gallery
             </a>
             <button
               onClick={() => scrollToSection("activities")}
-              className="text-gray-700 hover:text-primary transition-colors"
+              className="text-gray-800 hover:text-accent transition-colors font-medium tracking-wide text-sm uppercase"
             >
               Activities
             </button>
           </nav>
 
           {/* Contact Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <a
               href="mailto:mchristian@trinitygroupfl.com"
-              className="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors"
+              className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-accent transition-colors font-medium"
             >
-              <FaEnvelope />
+              <FaEnvelope className="text-accent" />
               <span>Email</span>
             </a>
             <a
               href="tel:813-530-2061"
-              className="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors"
+              className="flex items-center space-x-2 px-6 py-3 bg-accent text-white font-bold rounded-none hover:bg-accent/90 transition-colors shadow-lg"
             >
               <FaPhone />
-              <span>Call</span>
+              <span>Call Now</span>
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-2xl text-gray-700"
+            className="md:hidden text-2xl text-gray-800"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
