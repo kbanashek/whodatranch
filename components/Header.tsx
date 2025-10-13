@@ -29,18 +29,18 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection("home")}
+            <a
+              href="/"
               className="text-gray-700 hover:text-primary transition-colors"
             >
               Home
-            </button>
-            <button
-              onClick={() => scrollToSection("virtual-tour")}
+            </a>
+            <a
+              href="/virtual-tour"
               className="text-gray-700 hover:text-primary transition-colors"
             >
               Virtual Tour
-            </button>
+            </a>
             <button
               onClick={() => scrollToSection("gallery")}
               className="text-gray-700 hover:text-primary transition-colors"
@@ -83,33 +83,33 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 space-y-4">
-            <button
-              onClick={() => scrollToSection("home")}
-              className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection("virtual-tour")}
-              className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
-            >
-              Virtual Tour
-            </button>
-            <button
-              onClick={() => scrollToSection("gallery")}
-              className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
-            >
-              Gallery
-            </button>
-            <button
-              onClick={() => scrollToSection("activities")}
-              className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
-            >
-              Activities
-            </button>
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <nav className="md:hidden mt-4 pb-4 space-y-4">
+              <a
+                href="/"
+                className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="/virtual-tour"
+                className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
+              >
+                Virtual Tour
+              </a>
+              <button
+                onClick={() => scrollToSection("gallery")}
+                className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
+              >
+                Gallery
+              </button>
+              <button
+                onClick={() => scrollToSection("activities")}
+                className="block w-full text-left text-gray-700 hover:text-primary transition-colors"
+              >
+                Activities
+              </button>
             <div className="border-t pt-4 space-y-2">
               <a
                 href="mailto:mchristian@trinitygroupfl.com"
