@@ -12,6 +12,10 @@ package-lock.json
 /public/videos/*.avi
 /public/videos/*.mkv
 
+# downloads
+/downloads
+downloads/
+
 # testing
 /coverage
 
