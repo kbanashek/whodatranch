@@ -78,8 +78,8 @@ export default function PropertyOverview() {
                 </span>
                 , Who Dat Ranch represents a rare convergence of luxury,
                 privacy, and endless recreational opportunity. This is more than
-                an estate—it's a lifestyle destination where families create
-                lasting memories or savvy investors discover Florida's most
+                an estate—it&apos;s a lifestyle destination where families create
+                lasting memories or savvy investors discover Florida&apos;s most
                 unique short-term rental opportunity.
               </p>
             </div>
@@ -100,7 +100,7 @@ export default function PropertyOverview() {
                 goats, sheep, tortoises, and even a camel. Two stocked fishing
                 ponds with covered docks, a bird-watching tower, RC racing
                 track, skeet shooting, archery range, and ATV/Polaris course
-                transform this property into Central Florida's premier
+                transform this property into Central Florida&apos;s premier
                 recreational paradise.
               </p>
             </div>

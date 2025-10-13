@@ -71,7 +71,7 @@ export default function Activities() {
           </h1>
           <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
           <p className="text-2xl md:text-3xl text-gray-700 max-w-3xl mx-auto">
-            Don't just be housed, be entertained
+            Don&apos;t just be housed, be entertained
           </p>
         </div>
 

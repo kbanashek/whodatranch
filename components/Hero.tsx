@@ -53,32 +53,26 @@ export default function Hero() {
       <div className="relative z-20 h-full flex items-center pt-32 md:pt-40">
         <div className="container mx-auto px-8 md:px-16 lg:px-24 max-w-7xl">
           <div className="max-w-6xl">
-            {/* Luxury Badge */}
-            <div className="mb-8">
+            {/* <div className="mb-8">
               <div className="inline-block px-8 py-3 bg-accent border-2 border-accent shadow-2xl">
                 <p className="text-white font-bold tracking-[0.3em] text-xs md:text-sm uppercase">
                   Exclusive Offering
                 </p>
               </div>
-            </div>
-
+            </div> */}
             {/* Main Headline - MASSIVE - One Line */}
             <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-10 font-display leading-none tracking-tight drop-shadow-2xl whitespace-nowrap">
               WHO DAT RANCH
             </h1>
-
             <div className="w-32 h-1 bg-accent mb-10"></div>
-
             {/* Subheadline */}
             <p className="text-2xl md:text-3xl lg:text-4xl text-white/95 mb-6 leading-tight font-light drop-shadow-lg">
               32-Acre Luxury Equestrian Estate
             </p>
-
             <p className="text-lg md:text-xl text-white/90 mb-12 leading-relaxed max-w-2xl drop-shadow-md">
               Frostproof, Florida • Three Custom Cabins • Stocked Ponds •
               Private Paradise
             </p>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 mb-16">
               <button
@@ -100,7 +94,6 @@ export default function Hero() {
                 View Details
               </button>
             </div>
-
             {/* Key Features Bar */}
             <div className="flex flex-wrap gap-6 md:gap-12 pt-8 border-t-2 border-white/30">
               <div className="flex items-center gap-3">
