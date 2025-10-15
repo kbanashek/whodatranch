@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const heroImages = [
   "/images/Main House Cabin/Main House Front.JPG",
-  "/images/Main House Cabin/Main House Pool.jpg",
-  "/images/Main House Cabin/Back porch Pool.jpg",
+  "/images/firepit.jpg",
+  "/images/Ranch LifeStyle Shoot/IMG_0089-.jpg",
   "/images/drone_view.png",
 ];
 
