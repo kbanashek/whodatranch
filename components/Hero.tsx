@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const heroImages = [
-  "/images/Main House Cabin/Back porch Pool.jpg",
-  "/images/Ranch LifeStyle Shoot/IMG_8760-.jpg",
-  "/images/fishing-pond.jpg",
   "/images/Main House Cabin/Main House Front.JPG",
+  "/images/Ranch LifeStyle Shoot/IMG_8760-.jpg",
+  "/images/Main House Cabin/Back porch Pool.jpg",
+  "/images/drone_view.png",
 ];
 
 export default function Hero() {
@@ -16,7 +16,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 6000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
