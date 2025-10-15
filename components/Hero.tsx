@@ -5,8 +5,12 @@ import Image from "next/image";
 
 const heroImages = [
   "/images/Main House Cabin/Main House Front.JPG",
+  "/images/Main House Cabin/Back porch Pool.jpg",
   "/images/firepit.jpg",
   "/images/Ranch LifeStyle Shoot/IMG_0089-.jpg",
+  "/images/Main House Cabin/40_5330_Hwy_630_E_Frostproof_FL_33843_USA-Living_room-DSC06014.jpg",
+  "/images/Ranch LifeStyle Shoot/DJI_0311-.jpg",
+  "/images/Main House Cabin/Main House Side View.jpg",
   "/images/drone_view.png",
 ];
 
