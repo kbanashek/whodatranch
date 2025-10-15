@@ -3,7 +3,12 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const heroImages = ["/images/hero2.jpg", "/images/hero3.jpg"];
+const heroImages = [
+  "/images/Main House Cabin/Back porch Pool.jpg",
+  "/images/Ranch LifeStyle Shoot/IMG_8760-.jpg",
+  "/images/fishing-pond.jpg",
+  "/images/Main House Cabin/Main House Front.JPG",
+];
 
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
