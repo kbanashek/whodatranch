@@ -43,7 +43,7 @@ export default function BookingForm() {
     
     // Open email client with pre-filled information after a short delay
     setTimeout(() => {
-      window.location.href = `mailto:cat@hcbyachts.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:kylebanashek@yahoo.com?subject=${subject}&body=${body}`;
     }, 500);
 
     // Reset form

@@ -44,7 +44,7 @@ export default function Footer() {
 
     // Open email client with pre-filled information after a short delay
     setTimeout(() => {
-      window.location.href = `mailto:cat@hcbyachts.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:kylebanashek@yahoo.com?subject=${subject}&body=${body}`;
     }, 500);
 
     // Reset form
@@ -116,10 +116,10 @@ export default function Footer() {
                     Email
                   </p>
                   <a
-                    href="mailto:cat@hcbyachts.com"
+                    href="mailto:kylebanashek@yahoo.com"
                     className="block text-white/90 hover:text-accent transition-colors text-lg"
                   >
-                    cat@hcbyachts.com
+                    kylebanashek@yahoo.com
                   </a>
                 </div>
 
