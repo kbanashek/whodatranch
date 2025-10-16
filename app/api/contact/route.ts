@@ -5,72 +5,49 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, email, phone, date, message, formType } = body;
 
-    const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
+    // Log submission
+    console.log("=".repeat(60));
+    console.log("📧 NEW CONTACT FORM SUBMISSION");
+    console.log("=".repeat(60));
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Phone:", phone || "Not provided");
+    console.log("Date:", date || "Not specified");
+    console.log("Message:", message || "No message");
+    console.log("Form Type:", formType);
+    console.log("=".repeat(60));
 
-    if (!accessKey) {
-      // Fallback: Just log the submission and return success
-      console.log("=".repeat(60));
-      console.log("📧 NEW CONTACT FORM SUBMISSION");
-      console.log("=".repeat(60));
-      console.log("Name:", name);
-      console.log("Email:", email);
-      console.log("Phone:", phone || "Not provided");
-      console.log("Date:", date || "Not specified");
-      console.log("Message:", message || "No message");
-      console.log("Form Type:", formType);
-      console.log("=".repeat(60));
-      console.log("⚠️  WEB3FORMS_ACCESS_KEY not configured - email not sent");
-      console.log("See EMAIL_INSTRUCTIONS.md to enable email delivery");
-      console.log("=".repeat(60));
-      
-      return NextResponse.json({
-        success: true,
-        message: "Form submitted (logged to console - email not configured)",
-      });
-    }
-
-    // Create email content
-    const emailBody = `
-Tour Request Details:
-
-Name: ${name}
-Email: ${email}
-Phone: ${phone || "Not provided"}
-Preferred Date: ${date || "Not specified"}
-Message: ${message || "No additional message"}
-
-Form Type: ${formType || "contact"}
-`;
-
-    // Use Web3Forms API - free service
+    // Use FormSubmit.co - completely free, zero config, no API keys needed!
     const formData = new URLSearchParams();
-    formData.append("access_key", accessKey);
-    formData.append(
-      "subject",
-      `Who Dat Ranch - ${
-        formType === "booking" ? "Tour Request" : "Contact"
-      } from ${name}`
-    );
-    formData.append("from_name", name);
+    formData.append("name", name);
     formData.append("email", email);
-    formData.append("message", emailBody);
-    formData.append("redirect", "https://whodatranch.vercel.app");
+    formData.append("phone", phone || "Not provided");
+    formData.append("date", date || "Not specified");
+    formData.append("message", message || "No message");
+    formData.append(
+      "_subject",
+      `Who Dat Ranch - ${formType === "booking" ? "Tour Request" : "Contact"} from ${name}`
+    );
+    formData.append("_captcha", "false");
+    formData.append("_template", "table");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: formData.toString(),
-    });
+    const response = await fetch(
+      "https://formsubmit.co/kylebanashek@yahoo.com",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: formData.toString(),
+      }
+    );
 
-    const data = await response.json();
-
-    if (data.success) {
+    if (response.ok) {
+      console.log("✅ Email sent successfully to kylebanashek@yahoo.com");
       return NextResponse.json({ success: true });
     } else {
-      console.error("Web3Forms error:", data);
-      throw new Error(data.message || "Failed to send email");
+      console.error("FormSubmit error:", response.status, response.statusText);
+      throw new Error("Failed to send email");
     }
   } catch (error) {
     console.error("Email error:", error);
