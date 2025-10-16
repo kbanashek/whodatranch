@@ -24,38 +24,43 @@ export default function Footer() {
   });
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Create email body with form data
-    const subject = encodeURIComponent("Who Dat Ranch - Tour Request");
-    const body = encodeURIComponent(
-      `Tour Request Details:\n\n` +
-        `Name: ${formData.firstName} ${formData.lastName}\n` +
-        `Phone: ${formData.phone}\n` +
-        `Email: ${formData.email}\n` +
-        `Preferred Date: ${formData.date}\n` +
-        `Preferred Time: ${formData.time}\n\n` +
-        `Please contact me to schedule a tour of Who Dat Ranch.`
-    );
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          date: `${formData.date} at ${formData.time}`,
+          message: `Tour request for ${formData.date} at ${formData.time}`,
+          formType: "booking",
+        }),
+      });
 
-    // Show success modal
-    setShowSuccessModal(true);
-
-    // Open email client with pre-filled information after a short delay
-    setTimeout(() => {
-      window.location.href = `mailto:kylebanashek@yahoo.com?subject=${subject}&body=${body}`;
-    }, 500);
-
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      phone: "",
-      email: "",
-      date: "",
-      time: "",
-    });
+      if (response.ok) {
+        setShowSuccessModal(true);
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          date: "",
+          time: "",
+        });
+      } else {
+        alert("Failed to send request. Please try again or call us directly.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Failed to send request. Please try again or call us directly.");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -72,7 +77,7 @@ export default function Footer() {
         isOpen={showSuccessModal}
         onClose={() => setShowSuccessModal(false)}
         title="Request Submitted!"
-        message="Your email client will open with a pre-filled tour request. Please send it to complete your booking, and we'll contact you shortly to confirm."
+        message="Thank you for your interest! We've received your tour request and will contact you shortly to confirm your visit."
       />
 
       <footer className="bg-black text-white py-24 border-t-4 border-accent">
