@@ -20,6 +20,7 @@ Your contact forms need an access key from Web3Forms (free, no credit card).
 ## Local Testing (optional):
 
 Create `.env.local` file:
+
 ```
 WEB3FORMS_ACCESS_KEY=your_access_key_here
 ```
@@ -29,4 +30,3 @@ Then restart dev server: `npm run dev`
 ---
 
 **That's it!** The forms will now send emails directly to kylebanashek@yahoo.com
-

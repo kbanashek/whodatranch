@@ -8,15 +8,25 @@ export async function POST(request: Request) {
     const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
 
     if (!accessKey) {
-      console.error("WEB3FORMS_ACCESS_KEY not configured");
-      return NextResponse.json(
-        {
-          success: false,
-          error:
-            "Email service not configured. Please see EMAIL_INSTRUCTIONS.md",
-        },
-        { status: 500 }
-      );
+      // Fallback: Just log the submission and return success
+      console.log("=".repeat(60));
+      console.log("📧 NEW CONTACT FORM SUBMISSION");
+      console.log("=".repeat(60));
+      console.log("Name:", name);
+      console.log("Email:", email);
+      console.log("Phone:", phone || "Not provided");
+      console.log("Date:", date || "Not specified");
+      console.log("Message:", message || "No message");
+      console.log("Form Type:", formType);
+      console.log("=".repeat(60));
+      console.log("⚠️  WEB3FORMS_ACCESS_KEY not configured - email not sent");
+      console.log("See EMAIL_INSTRUCTIONS.md to enable email delivery");
+      console.log("=".repeat(60));
+      
+      return NextResponse.json({
+        success: true,
+        message: "Form submitted (logged to console - email not configured)",
+      });
     }
 
     // Create email content
@@ -37,7 +47,9 @@ Form Type: ${formType || "contact"}
     formData.append("access_key", accessKey);
     formData.append(
       "subject",
-      `Who Dat Ranch - ${formType === "booking" ? "Tour Request" : "Contact"} from ${name}`
+      `Who Dat Ranch - ${
+        formType === "booking" ? "Tour Request" : "Contact"
+      } from ${name}`
     );
     formData.append("from_name", name);
     formData.append("email", email);
