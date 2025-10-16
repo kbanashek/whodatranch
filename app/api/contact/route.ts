@@ -5,29 +5,60 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, email, phone, date, message, formType } = body;
 
-    // Use Formspree - completely free, no setup required!
-    const formData = {
-      name: name,
-      email: email,
-      phone: phone || "Not provided",
-      date: date || "Not specified",
-      message: message || "No message",
-      _subject: `Who Dat Ranch - ${formType === "booking" ? "Tour Request" : "Contact"} from ${name}`,
-      _replyto: email,
-    };
+    const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
 
-    const response = await fetch("https://formspree.io/f/xanyonov", {
+    if (!accessKey) {
+      console.error("WEB3FORMS_ACCESS_KEY not configured");
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            "Email service not configured. Please see EMAIL_INSTRUCTIONS.md",
+        },
+        { status: 500 }
+      );
+    }
+
+    // Create email content
+    const emailBody = `
+Tour Request Details:
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone || "Not provided"}
+Preferred Date: ${date || "Not specified"}
+Message: ${message || "No additional message"}
+
+Form Type: ${formType || "contact"}
+`;
+
+    // Use Web3Forms API - free service
+    const formData = new URLSearchParams();
+    formData.append("access_key", accessKey);
+    formData.append(
+      "subject",
+      `Who Dat Ranch - ${formType === "booking" ? "Tour Request" : "Contact"} from ${name}`
+    );
+    formData.append("from_name", name);
+    formData.append("email", email);
+    formData.append("message", emailBody);
+    formData.append("redirect", "https://whodatranch.vercel.app");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: JSON.stringify(formData),
+      body: formData.toString(),
     });
 
-    if (response.ok) {
+    const data = await response.json();
+
+    if (data.success) {
       return NextResponse.json({ success: true });
     } else {
-      throw new Error("Failed to send email");
+      console.error("Web3Forms error:", data);
+      throw new Error(data.message || "Failed to send email");
     }
   } catch (error) {
     console.error("Email error:", error);
