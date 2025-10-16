@@ -1,56 +1,34 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
-
-const resend = process.env.RESEND_API_KEY
-  ? new Resend(process.env.RESEND_API_KEY)
-  : null;
 
 export async function POST(request: Request) {
   try {
-    if (!resend) {
-      return NextResponse.json(
-        {
-          success: false,
-          error:
-            "Email service not configured. Please set RESEND_API_KEY environment variable.",
-        },
-        { status: 500 }
-      );
-    }
-
     const body = await request.json();
     const { name, email, phone, date, message, formType } = body;
 
-    const emailContent =
-      formType === "booking"
-        ? `
-New Tour Booking Request
+    // Use Formspree - completely free, no setup required!
+    const formData = {
+      name: name,
+      email: email,
+      phone: phone || "Not provided",
+      date: date || "Not specified",
+      message: message || "No message",
+      _subject: `Who Dat Ranch - ${formType === "booking" ? "Tour Request" : "Contact"} from ${name}`,
+      _replyto: email,
+    };
 
-Name: ${name}
-Email: ${email}
-Phone: ${phone || "Not provided"}
-Preferred Date: ${date || "Not specified"}
-Message: ${message || "No additional message"}
-    `
-        : `
-New Contact Form Submission
-
-Name: ${name}
-Email: ${email}
-Message: ${message || "No message provided"}
-    `;
-
-    const data = await resend.emails.send({
-      from: "Who Dat Ranch <onboarding@resend.dev>",
-      to: ["kylebanashek@yahoo.com"],
-      subject:
-        formType === "booking"
-          ? `New Tour Request from ${name}`
-          : `Contact Form: ${name}`,
-      text: emailContent,
+    const response = await fetch("https://formspree.io/f/xanyonov", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
     });
 
-    return NextResponse.json({ success: true, data });
+    if (response.ok) {
+      return NextResponse.json({ success: true });
+    } else {
+      throw new Error("Failed to send email");
+    }
   } catch (error) {
     console.error("Email error:", error);
     return NextResponse.json(
@@ -59,4 +37,3 @@ Message: ${message || "No message provided"}
     );
   }
 }
-
