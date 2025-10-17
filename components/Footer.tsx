@@ -28,18 +28,20 @@ export default function Footer() {
     e.preventDefault();
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          access_key: "p9o1uhqzth4c9g",
           name: `${formData.firstName} ${formData.lastName}`,
           email: formData.email,
           phone: formData.phone,
-          date: `${formData.date} at ${formData.time}`,
           message: `Tour request for ${formData.date} at ${formData.time}`,
-          formType: "booking",
+          date: formData.date,
+          time: formData.time,
+          subject: "New Tour Request - Who Dat Ranch",
         }),
       });
 
