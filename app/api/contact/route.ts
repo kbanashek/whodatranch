@@ -1,4 +1,7 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY || "re_CTRLGpnu_Gh4gNzuCYHF5Gg3jSxcUxmDs");
 
 export async function POST(request: Request) {
   try {
@@ -17,40 +20,30 @@ export async function POST(request: Request) {
     console.log("Form Type:", formType);
     console.log("=".repeat(60));
 
-    // Use FormSubmit.co - completely free, zero config, no API keys needed!
-    const formData = new URLSearchParams();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("phone", phone || "Not provided");
-    formData.append("date", date || "Not specified");
-    formData.append("message", message || "No message");
-    formData.append(
-      "_subject",
-      `Who Dat Ranch - ${formType === "booking" ? "Tour Request" : "Contact"} from ${name}`
-    );
-    formData.append("_captcha", "false");
-    formData.append("_template", "table");
+    const emailBody = `
+New Contact Form Submission from Who Dat Ranch
 
-    const response = await fetch(
-      "https://formsubmit.co/kylebanashek@yahoo.com",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: formData.toString(),
-      }
-    );
+Name: ${name}
+Email: ${email}
+Phone: ${phone || "Not provided"}
+Preferred Date: ${date || "Not specified"}
+Message: ${message || "No additional message"}
 
-    if (response.ok) {
-      console.log("✅ Email sent successfully to kylebanashek@yahoo.com");
-      return NextResponse.json({ success: true });
-    } else {
-      console.error("FormSubmit error:", response.status, response.statusText);
-      throw new Error("Failed to send email");
-    }
+Form Type: ${formType || "contact"}
+    `;
+
+    const data = await resend.emails.send({
+      from: "Who Dat Ranch <onboarding@resend.dev>",
+      to: ["kylebanashek@yahoo.com"],
+      subject: `Who Dat Ranch - ${formType === "booking" ? "Tour Request" : "Contact"} from ${name}`,
+      text: emailBody,
+      replyTo: email,
+    });
+
+    console.log("✅ Email sent successfully via Resend:", data);
+    return NextResponse.json({ success: true, data });
   } catch (error) {
-    console.error("Email error:", error);
+    console.error("❌ Email error:", error);
     return NextResponse.json(
       { success: false, error: "Failed to send email" },
       { status: 500 }
