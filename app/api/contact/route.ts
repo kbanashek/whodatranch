@@ -36,7 +36,7 @@ Form Type: ${formType || "contact"}
 
     const data = await resend.emails.send({
       from: "Who Dat Ranch <onboarding@resend.dev>",
-      to: ["cat@hcbyachts.com", "kylebanashek@yahoo.com"],
+      to: ["cat@hcbyachts.com"],
       subject: `Who Dat Ranch - ${
         formType === "booking" ? "Tour Request" : "Contact"
       } from ${name}`,
