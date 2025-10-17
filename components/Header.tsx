@@ -58,7 +58,7 @@ export default function Header() {
           {/* Contact Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="mailto:kylebanashek@yahoo.com"
+              href="mailto:cat@hcbyachts.com"
               className="flex items-center space-x-2 px-5 py-3 text-white/90 hover:text-accent transition-colors font-bold border border-white/20 hover:border-accent"
             >
               <FaEnvelope />
@@ -114,7 +114,7 @@ export default function Header() {
             </a>
             <div className="border-t border-white/20 pt-4 space-y-3">
               <a
-                href="mailto:kylebanashek@yahoo.com"
+                href="mailto:cat@hcbyachts.com"
                 className="flex items-center space-x-3 text-white hover:text-accent transition-colors font-bold"
               >
                 <FaEnvelope />
