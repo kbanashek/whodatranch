@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY || "re_CTRLGpnu_Gh4gNzuCYHF5Gg3jSxcUxmDs");
+const resend = new Resend(
+  process.env.RESEND_API_KEY || "re_CTRLGpnu_Gh4gNzuCYHF5Gg3jSxcUxmDs"
+);
 
 export async function POST(request: Request) {
   try {
@@ -35,7 +37,9 @@ Form Type: ${formType || "contact"}
     const data = await resend.emails.send({
       from: "Who Dat Ranch <onboarding@resend.dev>",
       to: ["cat@hcbyachts.com"],
-      subject: `Who Dat Ranch - ${formType === "booking" ? "Tour Request" : "Contact"} from ${name}`,
+      subject: `Who Dat Ranch - ${
+        formType === "booking" ? "Tour Request" : "Contact"
+      } from ${name}`,
       text: emailBody,
       replyTo: email,
     });
