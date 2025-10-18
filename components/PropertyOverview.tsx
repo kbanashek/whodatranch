@@ -45,14 +45,20 @@ export default function PropertyOverview() {
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-16 md:mb-24">
           {/* Image */}
-          <div className="relative h-[500px] md:h-[600px] overflow-hidden group">
+          <div className="relative h-[500px] md:h-[600px] overflow-hidden group cursor-pointer" onClick={() => window.open('/images/hero1.jpg', '_blank')}>
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
             <Image
               src="/images/hero1.jpg"
-              alt="Who Dat Ranch Aerial View with Property Labels"
+              alt="Who Dat Ranch Aerial View with Property Labels - Click to view full size"
               fill
               className="object-contain md:object-cover transition-transform duration-700 group-hover:scale-105"
             />
+            {/* Click overlay */}
+            <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="bg-white/90 text-black px-6 py-3 rounded-lg font-bold text-lg uppercase tracking-wider">
+                Click to View Full Map
+              </div>
+            </div>
           </div>
 
           {/* Description */}
