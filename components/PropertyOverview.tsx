@@ -45,7 +45,10 @@ export default function PropertyOverview() {
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-16 md:mb-24">
           {/* Image */}
-          <div className="relative h-[500px] md:h-[600px] overflow-hidden group cursor-pointer" onClick={() => window.open('/images/hero1.jpg', '_blank')}>
+            <div
+              className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden group cursor-pointer"
+              onClick={() => window.open("/images/hero1.jpg", "_blank")}
+            >
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
             <Image
               src="/images/hero1.jpg"
