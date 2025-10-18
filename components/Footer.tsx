@@ -93,13 +93,13 @@ export default function Footer() {
               </h3>
               <div className="w-32 h-1 bg-accent mb-8"></div>
               <p className="text-xl mb-10 text-white/90">
-                Contact Your Exclusive Agent
+                For Sale By Owner
               </p>
 
               <div className="space-y-8 mb-12">
                 <div>
                   <p className="font-bold text-accent mb-4 text-sm uppercase tracking-[0.3em]">
-                    Agent
+                    Owner Contact
                   </p>
                   <p className="text-2xl text-white/90 mb-4 font-light">
                     Cat Pfiefer
