@@ -48,10 +48,10 @@ export default function PropertyOverview() {
           <div className="relative h-[500px] md:h-[600px] overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
             <Image
-              src="/images/drone_view.png"
+              src="/images/hero2.jpg"
               alt="Who Dat Ranch Aerial View"
               fill
-              className="object-contain md:object-cover transition-transform duration-700 group-hover:scale-105"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
               <div className="bg-black/80 backdrop-blur-sm p-6 border-t-4 border-accent">
