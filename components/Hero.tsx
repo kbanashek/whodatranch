@@ -70,24 +70,24 @@ export default function Hero() {
                 </p>
               </div>
             </div> */}
-            {/* Main Headline - MASSIVE - One Line */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-10 font-display leading-none tracking-tight drop-shadow-2xl whitespace-nowrap">
+            {/* Main Headline - MASSIVE - Responsive */}
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-6 md:mb-10 font-display leading-none tracking-tight drop-shadow-2xl whitespace-nowrap overflow-hidden text-ellipsis">
               WHO DAT RANCH
             </h1>
-            <div className="w-32 h-1 bg-accent mb-10"></div>
+            <div className="w-24 md:w-32 h-1 bg-accent mb-6 md:mb-10"></div>
             {/* Subheadline */}
-            <p className="text-2xl md:text-3xl lg:text-4xl text-white/95 mb-6 leading-tight font-light drop-shadow-lg">
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white/95 mb-4 md:mb-6 leading-tight font-light drop-shadow-lg">
               32-Acre Luxury Equestrian Estate
             </p>
-            <p className="text-lg md:text-xl text-white/90 mb-12 leading-relaxed max-w-2xl drop-shadow-md">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 md:mb-12 leading-relaxed max-w-2xl drop-shadow-md">
               Frostproof, Florida • Three Custom Cabins • Stocked Ponds •
               Private Paradise
             </p>
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 mb-16">
+            {/* CTA Buttons - Mobile Optimized */}
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-12 md:mb-16">
               <button
                 onClick={scrollToBooking}
-                className="group px-12 py-6 bg-accent text-white font-bold text-xl uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-500 shadow-2xl relative overflow-hidden border-2 border-accent"
+                className="group px-8 sm:px-12 py-4 sm:py-6 bg-accent text-white font-bold text-base sm:text-lg md:text-xl uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-500 shadow-2xl relative overflow-hidden border-2 border-accent min-h-[48px]"
               >
                 <span className="relative z-10">Schedule Showing</span>
                 <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
@@ -99,44 +99,32 @@ export default function Hero() {
                     element.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
-                className="group px-12 py-6 bg-transparent border-3 border-white text-white font-bold text-xl uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-500 shadow-2xl"
+                className="group px-8 sm:px-12 py-4 sm:py-6 bg-transparent border-2 md:border-3 border-white text-white font-bold text-base sm:text-lg md:text-xl uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-500 shadow-2xl min-h-[48px]"
               >
                 View Details
               </button>
             </div>
             {/* Key Features Bar */}
-            <div className="flex flex-wrap gap-6 md:gap-12 pt-8 border-t-2 border-white/30">
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-accent"></div>
-                <p className="text-white font-bold text-lg uppercase tracking-wider">
+            <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-12 pt-6 md:pt-8 border-t-2 border-white/30">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-2 h-2 sm:w-3 sm:h-3 bg-accent"></div>
+                <p className="text-white font-bold text-sm sm:text-base md:text-lg uppercase tracking-wider">
                   32 Acres
                 </p>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-accent"></div>
-                <p className="text-white font-bold text-lg uppercase tracking-wider">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-2 h-2 sm:w-3 sm:h-3 bg-accent"></div>
+                <p className="text-white font-bold text-sm sm:text-base md:text-lg uppercase tracking-wider">
                   3 Residences
                 </p>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-accent"></div>
-                <p className="text-white font-bold text-lg uppercase tracking-wider">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-2 h-2 sm:w-3 sm:h-3 bg-accent"></div>
+                <p className="text-white font-bold text-sm sm:text-base md:text-lg uppercase tracking-wider">
                   Investment Ready
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Elegant Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-        <div className="flex flex-col items-center gap-3">
-          <p className="text-white/70 text-xs uppercase tracking-[0.3em] font-bold">
-            Scroll
-          </p>
-          <div className="w-8 h-12 border-2 border-white/40 rounded-full flex items-start justify-center p-2">
-            <div className="w-1.5 h-4 bg-accent rounded-full animate-pulse" />
           </div>
         </div>
       </div>

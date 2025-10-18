@@ -85,47 +85,47 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Optimized Touch Targets */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-6 pb-4 space-y-4 bg-black/60 backdrop-blur-lg p-6 rounded-lg border border-white/10">
+          <nav className="md:hidden mt-6 pb-4 space-y-2 bg-black/60 backdrop-blur-lg p-6 rounded-lg border border-white/10">
             <a
               href="/"
-              className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-sm"
+              className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-base py-3 px-2 min-h-[48px] flex items-center"
             >
               Home
             </a>
             <a
               href="/virtual-tour"
-              className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-sm"
+              className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-base py-3 px-2 min-h-[48px] flex items-center"
             >
               Virtual Tour
             </a>
             <a
               href="/gallery"
-              className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-sm"
+              className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-base py-3 px-2 min-h-[48px] flex items-center"
             >
               Gallery
             </a>
             <a
               href="/activities"
-              className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-sm"
+              className="block w-full text-left text-white hover:text-accent transition-colors font-bold uppercase tracking-widest text-base py-3 px-2 min-h-[48px] flex items-center"
             >
               Activities
             </a>
-            <div className="border-t border-white/20 pt-4 space-y-3">
+            <div className="border-t border-white/20 pt-4 space-y-2">
               <a
                 href="mailto:cat@hcbyachts.com"
-                className="flex items-center space-x-3 text-white hover:text-accent transition-colors font-bold"
+                className="flex items-center space-x-3 text-white hover:text-accent transition-colors font-bold py-3 px-2 min-h-[48px]"
               >
-                <FaEnvelope />
-                <span className="uppercase tracking-wider text-xs">Email</span>
+                <FaEnvelope className="text-lg" />
+                <span className="uppercase tracking-wider text-sm">Email</span>
               </a>
               <a
                 href="tel:8636401902"
-                className="flex items-center space-x-3 text-accent hover:text-white transition-colors font-bold"
+                className="flex items-center space-x-3 text-accent hover:text-white transition-colors font-bold py-3 px-2 min-h-[48px]"
               >
-                <FaPhone />
-                <span className="uppercase tracking-wider text-xs">
+                <FaPhone className="text-lg" />
+                <span className="uppercase tracking-wider text-sm">
                   Call Now
                 </span>
               </a>

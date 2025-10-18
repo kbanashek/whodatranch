@@ -58,26 +58,26 @@ export default function VirtualTour() {
               Video Experience
             </span>
           </div>
-          <h1 className="text-6xl md:text-7xl lg:text-9xl font-bold text-primary mb-8 font-display leading-none uppercase tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-bold text-primary mb-6 md:mb-8 font-display leading-none uppercase tracking-tight">
             Virtual Tour
           </h1>
-          <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
+          <div className="w-24 md:w-32 h-1 bg-accent mx-auto mb-6 md:mb-8"></div>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto px-4">
             Take a virtual tour of Who Dat Ranch and experience the property
             from the comfort of your home
           </p>
         </div>
 
-        {/* Video Grid */}
-        <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+        {/* Video Grid - Mobile Optimized */}
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 max-w-7xl mx-auto">
           {videos.map((video, index) => (
             <div
               key={index}
-              className="bg-white border-4 border-gray-200 hover:border-accent shadow-xl hover:shadow-2xl transition-all duration-500 group"
+              className="bg-white border-2 sm:border-4 border-gray-200 hover:border-accent shadow-xl hover:shadow-2xl transition-all duration-500 group"
             >
-              {/* Video Thumbnail */}
+              {/* Video Thumbnail - Responsive Height */}
               <div
-                className="relative h-80 bg-black cursor-pointer overflow-hidden"
+                className="relative h-56 sm:h-64 md:h-80 bg-black cursor-pointer overflow-hidden"
                 onClick={() => setSelectedVideo(index)}
               >
                 <img

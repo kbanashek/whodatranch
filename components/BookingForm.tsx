@@ -99,11 +99,11 @@ export default function BookingForm() {
                   Schedule Your Visit
                 </span>
               </div>
-              <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-primary mb-8 font-display leading-none uppercase tracking-tight">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 md:mb-8 font-display leading-none uppercase tracking-tight">
                 Experience Luxury Living
               </h2>
-              <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
-              <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
+              <div className="w-24 md:w-32 h-1 bg-accent mx-auto mb-6 md:mb-8"></div>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto px-4">
                 Take the first step toward owning your private paradise.
                 Schedule a private, personalized tour of this extraordinary
                 estate.
@@ -112,7 +112,7 @@ export default function BookingForm() {
 
             <form
               onSubmit={handleSubmit}
-              className="bg-white shadow-2xl p-12 md:p-16 border-t-4 border-accent"
+              className="bg-white shadow-2xl p-6 sm:p-8 md:p-12 lg:p-16 border-t-4 border-accent"
             >
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
@@ -230,7 +230,7 @@ export default function BookingForm() {
 
               <button
                 type="submit"
-                className="group w-full px-12 py-6 bg-accent text-white font-bold text-lg rounded-none hover:bg-accent/90 transition-all duration-300 shadow-2xl hover:shadow-accent/50 relative overflow-hidden"
+                className="group w-full px-8 sm:px-12 py-5 sm:py-6 bg-accent text-white font-bold text-base sm:text-lg rounded-none hover:bg-accent/90 transition-all duration-300 shadow-2xl hover:shadow-accent/50 relative overflow-hidden min-h-[56px]"
               >
                 <span className="relative z-10 uppercase tracking-widest">
                   Reserve Your Private Tour

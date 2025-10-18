@@ -33,17 +33,17 @@ export default function PropertyOverview() {
               The Estate
             </span>
           </div>
-          <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-primary mb-8 font-display leading-none uppercase tracking-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 md:mb-8 font-display leading-none uppercase tracking-tight">
             A Legacy Property
           </h2>
-          <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
+          <div className="w-24 md:w-32 h-1 bg-accent mx-auto mb-6 md:mb-8"></div>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto px-4">
             32 acres of pristine Central Florida paradise, meticulously crafted
             for luxury living and endless possibilities
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-16 md:mb-24">
           {/* Image */}
           <div className="relative h-[500px] md:h-[600px] overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
@@ -66,12 +66,12 @@ export default function PropertyOverview() {
           </div>
 
           {/* Description */}
-          <div className="space-y-10">
+          <div className="space-y-6 md:space-y-10">
             <div>
-              <h3 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-display uppercase tracking-tight">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 md:mb-6 font-display uppercase tracking-tight">
                 Your Private Sanctuary
               </h3>
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
                 Nestled in the heart of{" "}
                 <span className="font-bold text-accent">
                   Frostproof, Florida
@@ -108,18 +108,18 @@ export default function PropertyOverview() {
         </div>
 
         {/* Features Grid */}
-        <div className="mb-24">
-          <h3 className="text-5xl md:text-6xl font-bold text-primary text-center mb-16 font-display uppercase tracking-tight">
+        <div className="mb-16 md:mb-24">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary text-center mb-10 md:mb-16 font-display uppercase tracking-tight">
             Estate Features
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group flex flex-col items-center p-10 bg-white border-3 border-gray-200 hover:border-accent hover:shadow-2xl transition-all duration-300 relative"
+                className="group flex flex-col items-center p-6 sm:p-8 md:p-10 bg-white border-2 md:border-3 border-gray-200 hover:border-accent hover:shadow-2xl transition-all duration-300 relative"
               >
-                <div className="absolute top-0 left-0 w-2 h-full bg-accent transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300"></div>
-                <feature.icon className="text-6xl text-accent mb-6 group-hover:scale-125 transition-transform duration-300" />
+                <div className="absolute top-0 left-0 w-1.5 md:w-2 h-full bg-accent transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300"></div>
+                <feature.icon className="text-4xl sm:text-5xl md:text-6xl text-accent mb-4 md:mb-6 group-hover:scale-125 transition-transform duration-300" />
                 <span className="text-center text-gray-900 font-bold text-xs uppercase tracking-[0.2em]">
                   {feature.text}
                 </span>
