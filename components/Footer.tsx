@@ -92,9 +92,7 @@ export default function Footer() {
                 Who Dat Ranch
               </h3>
               <div className="w-32 h-1 bg-accent mb-8"></div>
-              <p className="text-xl mb-10 text-white/90">
-                For Sale By Owner
-              </p>
+              <p className="text-xl mb-10 text-white/90">For Sale By Owner</p>
 
               <div className="space-y-8 mb-12">
                 <div>

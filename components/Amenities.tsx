@@ -10,7 +10,7 @@ export default function Amenities() {
       title: "Fishing Ponds",
       description:
         "Grab a rod and enjoy ponds filled with bass, perch and more while you unwind by the water. Whether lake-side or dock fishing is your preference enjoy a calming experience catching your potential lunch.",
-      image: "/images/fishing-pond.jpg",
+      image: "/images/Ranch LifeStyle Shoot/DJI_0311-.jpg",
     },
     {
       icon: FaCar,
