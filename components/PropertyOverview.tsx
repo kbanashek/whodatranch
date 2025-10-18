@@ -48,21 +48,11 @@ export default function PropertyOverview() {
           <div className="relative h-[500px] md:h-[600px] overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
             <Image
-              src="/images/hero2.jpg"
-              alt="Who Dat Ranch Aerial View"
+              src="/images/hero1.jpg"
+              alt="Who Dat Ranch Aerial View with Property Labels"
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              className="object-contain md:object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
-              <div className="bg-black/80 backdrop-blur-sm p-6 border-t-4 border-accent">
-                <h3 className="text-3xl font-bold text-white mb-2 font-display uppercase tracking-wide">
-                  Main House
-                </h3>
-                <p className="text-white/90 text-sm uppercase tracking-widest">
-                  4 Bedrooms • 3 Bathrooms • Heated Pool
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Description */}
@@ -135,14 +125,33 @@ export default function PropertyOverview() {
               Unmatched Amenities
             </h3>
             <div className="w-24 h-1 bg-accent mb-8"></div>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl">
-              The estate boasts two stocked fishing ponds, axe throwing station,
-              fire pit, and an impressive 8-car carport. For collectors and
-              enthusiasts, a 4-bay machine garage provides vehicle storage,
-              while a massive 4-bay garage accommodates 50-foot trailers, RVs,
-              tour buses, or yachts—complete with a private service entrance
-              separate from the main property access.
-            </p>
+            <ul className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl space-y-3">
+              <li className="flex items-start">
+                <span className="text-accent mr-3 mt-2">•</span>
+                Two stocked fishing ponds with covered docks
+              </li>
+              <li className="flex items-start">
+                <span className="text-accent mr-3 mt-2">•</span>
+                Axe throwing station and fire pit
+              </li>
+              <li className="flex items-start">
+                <span className="text-accent mr-3 mt-2">•</span>
+                Impressive 8-car carport
+              </li>
+              <li className="flex items-start">
+                <span className="text-accent mr-3 mt-2">•</span>
+                4-bay machine garage for vehicle storage
+              </li>
+              <li className="flex items-start">
+                <span className="text-accent mr-3 mt-2">•</span>
+                Massive 4-bay garage for 50-foot trailers, RVs, tour buses, or
+                yachts
+              </li>
+              <li className="flex items-start">
+                <span className="text-accent mr-3 mt-2">•</span>
+                Private service entrance separate from main property access
+              </li>
+            </ul>
           </div>
         </div>
 
