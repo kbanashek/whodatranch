@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function AerialShowcase() {
   return (
-    <section className="relative py-16 md:py-24 lg:py-32 bg-black overflow-hidden">
+    <section className="relative py-16 md:py-24 lg:py-32 bg-red-500 overflow-hidden" style={{minHeight: '500px'}}>
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
