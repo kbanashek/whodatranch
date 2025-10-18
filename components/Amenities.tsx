@@ -17,7 +17,7 @@ export default function Amenities() {
       title: "Machine Garages",
       description:
         "With ample space to let loose, enjoy a high speed chase or a slow paced cruise through the entire property with multiple fully customized Polaris machines with more than enough juice to entertain as well as storage to carry on site picnic gear.",
-      image: "/images/ranch structures/machine_garages.jpg",
+      image: "/images/Ranch Structures/machine_garages.jpg",
     },
     {
       icon: FaPaw,
