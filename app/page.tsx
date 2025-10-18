@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PropertyOverview from "@/components/PropertyOverview";
+import AerialShowcase from "@/components/AerialShowcase";
 import FeaturedVideo from "@/components/FeaturedVideo";
 import BookingForm from "@/components/BookingForm";
 import Amenities from "@/components/Amenities";
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <Hero />
       <PropertyOverview />
+      <AerialShowcase />
       <FeaturedVideo />
       <section id="gallery" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">

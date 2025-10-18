@@ -71,7 +71,7 @@ export default function Hero() {
               </div>
             </div> */}
             {/* Main Headline - MASSIVE - Responsive */}
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-6 md:mb-10 font-display leading-none tracking-tight drop-shadow-2xl whitespace-nowrap overflow-hidden text-ellipsis">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-6 md:mb-10 font-display leading-none tracking-tight drop-shadow-2xl">
               WHO DAT RANCH
             </h1>
             <div className="w-24 md:w-32 h-1 bg-accent mb-6 md:mb-10"></div>
