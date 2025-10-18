@@ -14,7 +14,7 @@ export default function AerialShowcase() {
           className="object-cover opacity-40"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-black/60" />
       </div>
 
       {/* Content */}
