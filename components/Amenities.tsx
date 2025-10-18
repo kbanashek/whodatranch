@@ -10,21 +10,21 @@ export default function Amenities() {
       title: "Fishing Ponds",
       description:
         "Grab a rod and enjoy ponds filled with bass, perch and more while you unwind by the water. Whether lake-side or dock fishing is your preference enjoy a calming experience catching your potential lunch.",
-      image: "/images/Ranch LifeStyle Shoot/DJI_0311-.jpg",
+      image: "/images/Ranch LifeStyle Shoot/fishing_dock.jpg",
     },
     {
       icon: FaCar,
       title: "Machine Garages",
       description:
         "With ample space to let loose, enjoy a high speed chase or a slow paced cruise through the entire property with multiple fully customized Polaris machines with more than enough juice to entertain as well as storage to carry on site picnic gear.",
-      image: "/images/garage.jpg",
+      image: "/images/ranch structures/machine_garages.jpg",
     },
     {
       icon: FaPaw,
       title: "Multiple Barns",
       description:
         "Take a stroll through the animal area and feed or play with a host of wildlife who call Who Dat Ranch home.",
-      image: "/images/ax_throwing.jpg",
+      image: "/images/garage.jpg",
     },
   ];
 
