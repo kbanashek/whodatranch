@@ -23,20 +23,20 @@ export default function PropertyOverview() {
   return (
     <section
       id="property-overview"
-      className="py-24 md:py-32 bg-gradient-to-b from-white to-ranch-cream"
+      className="py-8 md:py-12 bg-gradient-to-b from-white to-ranch-cream"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className="inline-block mb-6">
+        <div className="text-center mb-8">
+          <div className="inline-block mb-3">
             <span className="px-8 py-3 border-2 border-accent text-accent font-bold text-xs uppercase tracking-[0.3em]">
               The Estate
             </span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 md:mb-8 font-display leading-none uppercase tracking-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-3 md:mb-4 font-display leading-none uppercase tracking-tight">
             A Legacy Property
           </h2>
-          <div className="w-24 md:w-32 h-1 bg-accent mx-auto mb-6 md:mb-8"></div>
+          <div className="w-24 md:w-32 h-1 bg-accent mx-auto mb-3 md:mb-4"></div>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto px-4">
             32 acres of pristine Central Florida paradise, meticulously crafted
             for luxury living and endless possibilities
