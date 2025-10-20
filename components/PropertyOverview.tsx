@@ -28,7 +28,7 @@ export default function PropertyOverview() {
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-2">
-          <div className="inline-block mb-3">
+          <div className="inline-block mb-6">
             <span className="px-8 py-3 border-2 border-accent text-accent font-bold text-xs uppercase tracking-[0.3em]">
               The Estate
             </span>
