@@ -47,10 +47,10 @@ export default function PropertyOverview() {
           {/* Image */}
           <div
             className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden cursor-pointer"
-            onClick={() => window.open("/images/Main House Cabin/Main House Front.JPG", "_blank")}
+            onClick={() => window.open("/images/drone_view.png", "_blank")}
           >
             <Image
-              src="/images/Main House Cabin/Main House Front.JPG"
+              src="/images/drone_view.png"
               alt="Who Dat Ranch Aerial View with Property Labels - Click to view full size"
               fill
               className="object-contain"
