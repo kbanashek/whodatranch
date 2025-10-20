@@ -53,7 +53,13 @@ export default function PropertyOverview() {
               src="/images/mainHouse.png"
               alt="Who Dat Ranch Aerial View with Property Labels - Click to view full size"
               fill
-              className="object-contain brightness-100 contrast-100 saturate-100"
+              className="object-contain"
+              style={{
+                filter: 'none',
+                brightness: '1',
+                contrast: '1',
+                saturate: '1'
+              }}
             />
           </div>
 
