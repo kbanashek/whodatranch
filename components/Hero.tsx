@@ -34,7 +34,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden">
+    <section id="home" className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
       {/* Full Screen Background Image Slideshow */}
       <div className="absolute inset-0 bg-black">
         {heroImages.map((image, index) => (

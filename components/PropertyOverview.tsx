@@ -43,7 +43,7 @@ export default function PropertyOverview() {
           </p>
         </div>
 
-        <div className="mb-8">
+        <div className="mb-6">
           {/* Image */}
           <div
             className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden cursor-pointer"
