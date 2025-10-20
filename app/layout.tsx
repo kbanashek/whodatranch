@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     siteName: "Who Dat Ranch",
     images: [
       {
-        url: "/images/mainHouse.png",
+        url: "/images/ranchEntrance.png",
         width: 1200,
         height: 630,
-        alt: "Who Dat Ranch - Aerial Property View",
+        alt: "Who Dat Ranch - Grand Entrance",
       },
     ],
     locale: "en_US",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Who Dat Ranch | Luxury Property in Frostproof, FL",
     description:
       "For Sale: Who Dat Ranch - 32 acres of paradise in Frostproof, FL. Luxury home with 4 bedrooms, 3 baths, fishing ponds, livestock, and endless amenities.",
-    images: ["/images/mainHouse.png"],
+    images: ["/images/ranchEntrance.png"],
   },
 };
 
