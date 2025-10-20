@@ -44,7 +44,7 @@ export default function PropertyOverview() {
         </div>
 
         <div className="mb-2">
-          {/* Image - Updated for production */}
+          {/* Image - Force deployment */}
           <div
             className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden cursor-pointer"
             onClick={() => window.open("/images/mainHouse.png", "_blank")}
