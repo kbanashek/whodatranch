@@ -9,6 +9,9 @@ const bebasNeue = Bebas_Neue({
   variable: "--font-bebas",
 });
 
+// Generate dynamic cache-busting version based on build time
+const imageVersion = Date.now();
+
 export const metadata: Metadata = {
   title: "Who Dat Ranch | Luxury Property in Frostproof, FL",
   description:
@@ -23,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Who Dat Ranch",
     images: [
       {
-        url: "/images/ranchEntrance.png?v=2",
+        url: `/images/ranchEntrance.png?v=${imageVersion}`,
         width: 1200,
         height: 630,
         alt: "Who Dat Ranch - Grand Entrance",
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
     title: "Who Dat Ranch | Luxury Property in Frostproof, FL",
     description:
       "For Sale: Who Dat Ranch - 32 acres of paradise in Frostproof, FL. Luxury home with 4 bedrooms, 3 baths, fishing ponds, livestock, and endless amenities.",
-    images: ["/images/ranchEntrance.png?v=2"],
+    images: [`/images/ranchEntrance.png?v=${imageVersion}`],
   },
 };
 

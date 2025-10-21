@@ -100,7 +100,7 @@ export default function Footer() {
                     Owner Contact
                   </p>
                   <p className="text-2xl text-white/90 mb-4 font-light">
-                    Cat Pfiefer
+                    Cat Pfieffer
                   </p>
                 </div>
 
