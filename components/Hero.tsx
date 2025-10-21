@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const heroImages = [
+  "/images/ranchEntrance_v3.png",
   "/images/Main House Cabin/Main House Front.JPG",
   "/images/main-home.jpg",
   "/images/Main House Cabin/Back porch Pool.jpg",
